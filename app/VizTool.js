@@ -91,9 +91,10 @@ define([
 
             createUI: function (container) {
                 this.title = domCtr.create("div", { className: "titleViz", id: "titleViz", innerHTML: "Visualisation by" }, container);
-                this.label1 = domCtr.create("div", { className: "labelViz", id: "viz-white", innerHTML: "none" }, container);
-                this.label2 = domCtr.create("div", { className: "labelViz", id: "viz-usage", innerHTML: "usage" }, container);
-                this.label3 = domCtr.create("div", { className: "labelViz", id: "viz-area", innerHTML: "area" }, container);
+                this.label1 = domCtr.create("div", { className: "labelViz", id: "viz-white", innerHTML: "None" }, container);
+                this.label2 = domCtr.create("div", { className: "labelViz", id: "viz-usage", innerHTML: "Usage" }, container);
+                this.label4 = domCtr.create("div", { className: "labelViz", id: "viz-tenancy", innerHTML: "Tenancy" }, container);
+                this.label3 = domCtr.create("div", { className: "labelViz", id: "viz-area", innerHTML: "Area" }, container);
 
                 this.statsDiv = domCtr.create("div", { id: "statsDiv", className: "statsDiv" }, container);
                 this.chartDiv = domCtr.create("div", { id: "chartDiv", className: "chartDiv" }, container);
@@ -113,23 +114,34 @@ define([
                 var viz = state.name;
 
                 if (viz === "white") {
-                    domStyle.set(dom.byId("viz-white"), { "opacity": 1, "border": "1px solid black" });
-                    domStyle.set(dom.byId("viz-usage"), { "opacity": 0.3, "border": "1px solid black" });
-                    domStyle.set(dom.byId("viz-area"), { "opacity": 0.3, "border": "1px solid black" });
+                    domStyle.set(dom.byId("viz-white"), { "opacity": 1});
+                    domStyle.set(dom.byId("viz-usage"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-tenancy"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-area"), { "opacity": 0.3});
                     domCtr.destroy(dom.byId("reload"));
                 }
 
                 if (viz === "usage") {
-                    domStyle.set(dom.byId("viz-usage"), { "opacity": 1, "border": "1px solid black" });
-                    domStyle.set(dom.byId("viz-white"), { "opacity": 0.3, "border": "1px solid black" });
-                    domStyle.set(dom.byId("viz-area"), { "opacity": 0.3, "border": "1px solid black" });
+                    domStyle.set(dom.byId("viz-usage"), { "opacity": 1});
+                    domStyle.set(dom.byId("viz-white"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-tenancy"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-area"), { "opacity": 0.3});
+                    domCtr.destroy(dom.byId("reload"));
+                }
+             
+                if (viz === "tenany") {
+                    domStyle.set(dom.byId("viz-usage"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-white"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-tenancy"), { "opacity": 1});
+                    domStyle.set(dom.byId("viz-area"), { "opacity": 0.3});
                     domCtr.destroy(dom.byId("reload"));
                 }
 
                 if (viz === "area") {
-                    domStyle.set(dom.byId("viz-area"), { "opacity": 1, "border": "1px solid black" });
-                    domStyle.set(dom.byId("viz-white"), { "opacity": 0.3, "border": "1px solid black" });
-                    domStyle.set(dom.byId("viz-usage"), { "opacity": 0.3, "border": "1px solid black" });
+                    domStyle.set(dom.byId("viz-area"), { "opacity": 1});
+                    domStyle.set(dom.byId("viz-white"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-usage"), { "opacity": 0.3});
+                    domStyle.set(dom.byId("viz-tenancy"), { "opacity": 0.3});
                     this.reload = domCtr.create("div", { id: "reload" }, this.container);
                     domCtr.create("img", { className: "reload", src: "img/reload.png", style: "width:25px;height:25px" }, this.reload);
                 }
@@ -163,6 +175,10 @@ define([
                 on(this.label3, "click", function (evt) {
                     this.updateVizState({ name: "area" });
                 }.bind(this));
+             
+                on(this.label4, "click", function (evt) {
+                    this.updateVizState({ name: "tenancy" });
+                }.bind(this));
 
             },
 
@@ -173,7 +189,7 @@ define([
                     var query = settings.layer1.createQuery();
 
                     query.returnGeometry = false;
-                    query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname];
+                    query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname, settings.tenancyname];
 
                     settings.layer1.queryFeatures(query).then(function (result) {
                         var currentResult = result.features;
@@ -183,12 +199,15 @@ define([
                         var initStats = statsMaker.createChartData(currentResult, settings, this.view);
                         // for usage renderer
                         var initUsage = chartMaker.createChartData(currentResult, settings);
+                        // for tenancy renderer
+                        var initTenancy = chartMaker.createChartData_ten(currentResult, settings);
                         // for area renderer
                         var initArea = barMaker.createChartData(currentResult, settings, 10);
 
                         var initCharts = {
                             stats: initStats,
                             usage: initUsage,
+                            tenancy: initTenancy,
                             area: initArea
                         };
 
@@ -265,6 +284,17 @@ define([
                         this.menu.setLoadingState("loaded");
                     }.bind(this));
                 }
+                if (vizName === "tenancy") {
+                    settings.layer1.renderer = applyRenderer.createRenderer(settings.values_ten, settings.color, settings.usagename);
+
+                    domStyle.set(dom.byId("chartDiv"), { "opacity": 1 });
+                    domStyle.set(dom.byId("statsDiv"), { "opacity": 0 });
+
+                    chartMaker.createChart_ten(this.view, initCharts.tenancy, settings, "city", function (state) {
+                        this.menu.setLoadingState("loaded");
+                    }.bind(this));
+                }
+             
                 if (vizName === "area") {
                     settings.layer1.renderer = applyRenderer.createRendererVV(initData, settings.areaname);
 
@@ -286,7 +316,7 @@ define([
                 var query = settings.layer1.createQuery();
 
                 query.returnGeometry = false;
-                query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname];
+                query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname, settings.tenancyname];
 
                 settings.layer1.queryFeatures(query).then(function (result) {
 
@@ -311,6 +341,23 @@ define([
 
                         var chartData = chartMaker.createChartData(selection, settings);
                         chartMaker.createChart(view, chartData, settings, "building", function (state) {
+                            menu.setLoadingState(state);
+                        });
+
+                        var data = statsMaker.createChartData(selection, settings);
+                        statsMaker.createChart(data, function (state) {
+                            menu.setLoadingState(state);
+                        });
+                    }
+                 
+                    if (vizName === "tenancy") {
+                        settings.layer1.renderer = applyRenderer.createRenderer(settings.values_ten, settings.color, settings.tenancyname);
+
+                        domStyle.set(dom.byId("chartDiv"), { "opacity": 1 });
+                        domStyle.set(dom.byId("statsDiv"), { "opacity": 0 });
+
+                        var chartData = chartMaker.createChartData_ten(selection, settings);
+                        chartMaker.createChart_ten(view, chartData, settings, "building", function (state) {
                             menu.setLoadingState(state);
                         });
 
