@@ -81,6 +81,10 @@ define([
                         break;
                     case "usage": this.state.usageFeatures = selection;
                         break;
+                    case "tenancy": this.state.tenancyFeatures = selection;
+                        break;
+                    case "status": this.state.statusFeatures = selection;
+                       break;
                     case "none":
                         this.state.usageFeatures = undefined;
                         this.state.floorFeatures = undefined;
@@ -99,6 +103,9 @@ define([
                 filterstate.usageFeatures = undefined;
                 filterstate.floorFeatures = undefined;
                 filterstate.areaFeatures = undefined;
+                filterstate.tenancyFeatures = undefined;
+                filterstate.statusFeatures = undefined;
+                
 
                 callback(filterstate);
 
@@ -184,6 +191,8 @@ define([
 
                 this.createFilterFloorUI(this.container);
                 this.createFilterUsageUI(this.container);
+                this.createFilterTenancyUI(this.container);
+                this.createFilterStatusUI(this.container);
                 this.createFilterAreaUI(this.container);
 
                 on(this.reset, "click", function (evt) {
@@ -224,6 +233,40 @@ define([
                     }.bind(this));
 
                     this.onChangeUsage = this.dropdownChangeUsage(this.usageSelector, this.settings.usagename, "usage");
+
+                }.bind(this));
+
+            },
+         
+            createFilterTenancyUI: function (container) {
+                this.TenancyFilterContainer = domCtr.create("div", { className: "FilterLabel", id: "filter-tenancy" }, container);
+
+                queryTools.distinctValues(this.settings.layer1, this.settings.tenancyname, this.settings.OIDname, function (distinctValues) {
+                    distinctValues.sort();
+                    distinctValues.unshift("Select Tenancy");
+
+                    this.setDropdown("Tenancy", distinctValues, this.TenancyFilterContainer, function (tenancySelector) {
+                        this.tenancySelector = tenancySelector;
+                    }.bind(this));
+
+                    this.onChangeTenancy = this.dropdownChangeTenancy(this.tenancySelector, this.settings.tenancyname, "tenancy");
+
+                }.bind(this));
+
+            },
+         
+            createFilterStatusUI: function (container) {
+                this.StatusFilterContainer = domCtr.create("div", { className: "FilterLabel", id: "filter-status" }, container);
+
+                queryTools.distinctValues(this.settings.layer1, this.settings.statusname, this.settings.OIDname, function (distinctValues) {
+                    distinctValues.sort();
+                    distinctValues.unshift("Select Status");
+
+                    this.setDropdown("Status", distinctValues, this.StatusFilterContainer, function (statusSelector) {
+                        this.statusSelector = statusSelector;
+                    }.bind(this));
+
+                    this.onChangeStatus = this.dropdownChangeStatus(this.statusSelector, this.settings.statusname, "status");
 
                 }.bind(this));
 
@@ -355,6 +398,20 @@ define([
 
                 on(nameSelector, "change", function () {
                     this.updateFilterFeatures(nameSelector, fieldname, "usage");
+                }.bind(this));
+            },
+         
+            dropdownChangeTenancy: function (nameSelector, fieldname, state) {
+
+                on(nameSelector, "change", function () {
+                    this.updateFilterFeatures(nameSelector, fieldname, "tenancy");
+                }.bind(this));
+            },
+         
+            dropdownChangeStatus: function (nameSelector, fieldname, state) {
+
+                on(nameSelector, "change", function () {
+                    this.updateFilterFeatures(nameSelector, fieldname, "status");
                 }.bind(this));
             },
 
