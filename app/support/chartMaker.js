@@ -64,6 +64,35 @@ define([
 
                 return chartData;
             },
+         
+            createChartData_ten: function (selection, settings) {
+
+                   var color = this.rgbToHex(settings.color);
+
+                   var chartData_ten = [];
+
+                   for (var j = 0; j < settings.values_ten.length; j++) {
+                       chartData_ten.push({
+                           tenancy: settings.values_ten[j],
+                           area: 0,
+                           color: color[j]
+                       });
+                   }
+                   for (var k = 0; k < selection.length; k++) {
+                       var selectiontenancy = selection[k].attributes[settings.tenancyname];
+                       var selectionarea = selection[k].attributes[settings.areaname];
+                       for (var m = 0; m < chartData_ten.length; m++) {
+                           if (selectiontenancy === chartData_ten[m].tenancy) {
+                               chartData_ten[m].area += selectionarea;
+                           }
+                       }
+                   }
+
+                   for (var i = 0; i < chartData_ten.length; i++) {
+                       chartData_ten[i].area = Math.round(chartData_ten[i].area);
+                   }
+                   return chartData_ten;
+               },
 
 
             createChart: function (view, data, settings, state, callback) {
@@ -84,11 +113,11 @@ define([
                     "titleField": "usage",
                     "colorField": "color",
                     "groupPercent": groupPercentValue,
-                    "startRadius": 70,
+                    "startRadius": 100,
                     "fontSize": 12,
                     "fontFamily": "Avenir LT W01 65 Medium",
-                    "radius": 70,
-                    "marginTop": 100,
+                    "radius": 100,
+                    "marginTop": 20,
                     "pieAlpha": 0.8,
                     "sequencedAnimation": true,
                     "balloon": {
@@ -133,6 +162,89 @@ define([
                             chart.pullSlice(dataItem, 1);
 
                             settings.layer1.renderer = applyRenderer.createRenderer(selectedvalues, selectedcolor, settings.usagename);
+                            
+                            view.environment.lighting.directShadowsEnabled = false;
+                            view.environment.lighting.ambientOcclusionEnabled = false;
+                        }
+
+                    }.bind(this),
+                    "export": {
+                        "enabled": true
+                    }
+                });
+
+                callback("loaded");
+
+            },
+         
+            createChart_ten: function (view, data, settings, state, callback) {
+
+                var color = this.rgbToHex(settings.color);
+
+                var groupPercentValue = 0;
+
+                if (settings.name !== "Zurich") {
+                    groupPercentValue = "0";
+                }
+
+                var chart = AmCharts.makeChart("chartDiv", {
+                    "type": "pie",
+                    "theme": "light",
+                    "hideCredits":true,
+                    "dataProvider": data,
+                    "valueField": "area",
+                    "titleField": "tenancy",
+                    "colorField": "color",
+                    "groupPercent": groupPercentValue,
+                    "startRadius": 100,
+                    "fontSize": 12,
+                    "fontFamily": "Avenir LT W01 65 Medium",
+                    "radius": 100,
+                    "marginTop": 13,
+                    "pieAlpha": 0.8,
+                    "sequencedAnimation": true,
+                    "balloon": {
+                        "fixedPosition": true
+                    },
+                    "clickSlice": function (dataItem, event) {
+
+                        var value_ten = dataItem.title;
+
+                        var fields = [];
+                        for (var i = 0; i < settings.values_ten.length; i++) {
+                            fields.push({
+                                values_ten: settings.values_ten[i],
+                                color: [135, 135, 135, 0.2]
+                            });
+                        }
+
+                        for (var j = 0; j < fields.length; j++) {
+                            if (fields[j].values_ten === value_ten) {
+                                fields[j].color = color[j];
+                            }
+                        }
+
+                        var selectedvalues_ten = [];
+                        var selectedcolor = [];
+
+                        for (var k = 0; k < fields.length; k++) {
+                            selectedvalues_ten.push(fields[k].values_ten);
+                            selectedcolor.push(fields[k].color);
+                        }
+
+
+                        if (dataItem.pulled) {
+                            chart.pullSlice(dataItem, 0);
+ 
+                            settings.layer1.renderer = applyRenderer.createRenderer(settings.values_ten, settings.color, settings.tenancyname);
+                            
+                            view.environment.lighting.directShadowsEnabled = true;
+                            view.environment.lighting.ambientOcclusionEnabled = true;
+
+                        } else {
+                            chart.pullSlice(dataItem, 1);
+
+                            settings.layer1.renderer = applyRenderer.createRenderer(selectedvalues_ten, selectedcolor, settings.tenancyname);
                             
                             view.environment.lighting.directShadowsEnabled = false;
                             view.environment.lighting.ambientOcclusionEnabled = false;
