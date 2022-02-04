@@ -70,13 +70,13 @@ define([
         // application settings
         var settings_demo = {
             name: "Demo",
-            url: "https://esriireland.maps.arcgis.com",           // portal URL for config
-            webscene: "7c5c0b4006a24f97b0b15806d0abda88",   // portal item ID of the webscene
-            usagename: "UsageType",                             // usage attribute (string)
-            floorname: "FloorLevel",                           // floor attribute (int)
+            url: "https://cwireland.maps.arcgis.com",           // portal URL for config
+            webscene: "769dba86607e4662a9e28f2e02c305f6",   // portal item ID of the webscene
+            usagename: "Use_",                             // usage attribute (string)
+            floorname: "Floor",                           // floor attribute (int)
             OIDname: "OBJECTID",                            // objectid
-            buildingIDname: "UID",                   // building attribute (int)
-            areaname: "GFATotal",                           // area attribute (float)
+            buildingIDname: "BuildID",                   // building attribute (int)
+            areaname: "sq_m",                           // area attribute (float)
             color: [                                        // color ramp for unique value renderer
                     [178, 171, 210, 1],                     
                     [253, 174, 97, 1],
