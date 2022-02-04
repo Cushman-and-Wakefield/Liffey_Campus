@@ -215,7 +215,8 @@ define([
                                     name: "none",
                                     usageFeatures: undefined,
                                     areaFeatures: undefined,
-                                    floorFeatures: undefined
+                                    floorFeatures: undefined,
+                                    tenancyFeatures: undefined
                                 },
                                 combinedFilteredFeatures: undefined
                             }
