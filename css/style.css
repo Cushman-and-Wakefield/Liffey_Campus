@@ -42,11 +42,13 @@ html, body {
   }
 
 .button{ 
-  font-size: 16px;
-  padding: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
-  border: 1px solid grey
+  font-size: 0.8vw;
+  padding: 0%;
+  vertical-align: middle;
+  padding-left: 0%;
+  padding-right: 0%;
+  border-radius: 8px;
+  align-items: center;
 }
 
 #homeButton{
@@ -54,7 +56,8 @@ html, body {
   right: 20px;
   top: 10px;
   text-align: center;
-  cursor: pointer
+  vertical-align:middle;
+  cursor: pointer;
 }
 
 #homeButton:hover{
@@ -126,6 +129,7 @@ html, body {
 }
 
 #header{
+  display:none;
   position: absolute;
   top: 0px;
   height: 40px;
@@ -211,17 +215,17 @@ html, body {
 }
 
 #viewDiv {
-  margin-top: 50px;
-  width: calc(100% - 450px);
-  height: calc(100% - 50px);
+  margin-top: 0px;
+  width: 70%;
+  height: 100%;
 }
 
 #toolsMenu{
   position: absolute;
-  top: 50px;
-  height: calc(100% - 50px);
+  top: 0px;
+  height: 100%;
   right: 0px;
-  width: 450px;
+  width: 30%;
 }
 
 .containerSelect {
@@ -231,8 +235,9 @@ html, body {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 15px;
-    width: 400px;
+    width: 500px;
     height: 50px;
+    display: none;
   }
 
 .labelSelect {
@@ -254,7 +259,7 @@ html, body {
   top: 50px;
   height: calc(100% - 50px);
   right: 0px;
-  width: 450px;
+  width: 600px;
   background: white;
   opacity: 0.7
 }
@@ -284,148 +289,225 @@ html, body {
 
 .titleViz {
   position: relative;
-  padding-left: 5px;
-  padding-bottom: 5px;
-  font-size: 18px
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding-top: 3%;
+  padding-bottom: 0.5%;
+  margin-bottom: 1.5%;
+  color: grey;
+  border-bottom: 1px solid #FBE789;
 }
 
 .containerViz {
     position: relative;
-    top: 20px;
-    margin: 0;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    width: 400px;
-    height: 480px;
+    top: 0px;
+    margin: 0px;
+    padding-left: 2.5%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 2.5%;
+    width: 95%;
+    height: 58%;
   }
 
 .labelViz {
   position: absolute;
-  padding-top: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 110px;
-  height: 40px;
-  background: grey;
-  color: white;
+  padding: 0;
+  width: 19.3%;
+  height: 6.7%;
+  background: #FBE789;
+  color: grey;
   text-align: center;
-  cursor: pointer
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.75vw;
+  align-items: center;
 }
 
 #reset{
   position: absolute;
-  width: 50px;
-  top: 240px;
-  left: 20px;
+  width: 12%;
+  height: 10%;
+  top: 85%;
+  left: 44%;
   text-align: center;
-  cursor: pointer
+  vertical-align: middle;
+  cursor: pointer;
+  background: grey;
+  color: white;
+  font-size: 0.75vw;
+  align-items: center;
 }
 
 #reset:hover{
-  background: grey;
-  color: white
+  background: #FBE789;
+  color: grey
 }
 
 #viz-white {
-  left: 20px;
+  left: 3.5%;
+  border-radius: 8px;
 }
 
 #viz-usage {
-  left: 160px;
+  left: 28%;
+  border-radius: 8px;
+}
+
+#viz-tenancy {
+  left: 52.6%;
+  border-radius: 8px;
 }
 
 #viz-area {
-  left: 300px;
+  left: 77.2%;
+  border-radius: 8px;
+}
+
+#viz-leaseexpiry {
+  left: 3.5%;
+  top: 24%;
+  border-radius: 8px;
+}
+
+#viz-reviewdate {
+  left: 28%;
+  top: 24%;
+  border-radius: 8px;
 }
 
 .titleFilter{
   position: relative;
-  padding-left: 5px;
-  padding-bottom: 5px;
-  font-size: 18px
+  padding-left: 1.4%;
+  padding-bottom: 1.4%;
+  font-size: 1.35vw;
+  color: grey;
+}
+
+#titleFilter {
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding-bottom: 0.5%;
+  margin-top: 3.5%;
+  margin-bottom: 2%;
+  color: grey;
+  border-bottom: 1px solid #FBE789;
 }
 
 #titleAreaMin{
     position: absolute;
-    top: 205px;
-    font-size: 16px;
-    left: 20px;
-    font-size: 11pt;
+    top: 86%;
+    left: 0%;
+    font-size: 0.8vw;
 }
 
 #titleAreaMax{
     position: absolute;
-    top: 205px;
-    font-size: 16px;
-    right: 6px;
-    font-size: 11pt;
+    top: 86%;
+    right: 1.75%;
+    font-size: 0.8vw;
 }
 
 .containerFilter {
     position: relative;
-    top: 20px;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    width: 400px;
-    height: 250px;
+    padding-left: 2.5%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 2.5%;
+    width: 95%;
+    height: 40%;
   }
 
 .FilterLabel{
   position: absolute;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 197px;
-  height: 40px;
+  padding-top: 1.5%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 1.5%;
+  width: 28%;
+  height: 11%;
+  border: none;
+  color: grey;
+  border-bottom: 1px solid #FBE789;
+  font-size: 0.82vw;
 }
 
 .filterDropdown{
-  width: 100%;;
+  width: 100%;
+  border: none;
+  color: grey;
+  font-size: 0.82vw;
 }
 
 #AreaMin{
     position: absolute;
-    top: 120px;
-    padding-left: 5px;
-    width: 250px;
-    height: 20px;
+    top: 45%;
+    padding-left: 0px;
+    width: 50%;
+    height: 10%;
     background: #80C9F5;
 }
 
 #AreaMax{
   position: absolute;
-    top: 190px;
-    padding-left: 5px;
-    width: 320px;
-    height: 20px;
+    top: 45%;
+    padding-left: 0px;
+    width: 50%;
+    height: 10%;
 }
 
 #confirmButton{
-      position: relative;
+     position: relative;
     top: 90px;
     width: 60px;
     left: 340px;
 }
 
 #filter-floors {
-  top: 50px;
+  top: 15%;
 }
 
 #filter-usage {
-  top: 50px;
-  left: 230px
+  top: 15%;
+  left: 35%
+}
+
+#filter-tenancy {
+  top: 15%;
+  left: 68%;
+}
+
+#filter-status {
+  top: 35%;
+}
+
+#filter-leaseexpiry {
+  top: 100px;
+  left: 215px;
+  display: none;
+}
+
+#filter-reviewdate {
+  top: 100px;
+  left: 215px;
+  display: none;
+}
+
+#filter-reviewtype {
+  top: 100px;
+  left: 415px;
+  display:none;
 }
 
 #filterAreaMin{
     position: absolute;
-    top: 135px;
-    width: 400px;
-    left: 25px;
+    top: 60%;
+    width: 95%;
+    height: 25%;  
+    left: 2.5%;
     padding-left: 0;
+    color: #FBE789; 
 }
 
 .Floorcontainer {
@@ -442,64 +524,122 @@ html, body {
 #chartDiv {
   position: absolute;
   background: white;
-  top: 100px;
+  top: 28%;
   align-items: center;
-  margin-top: 15px;
-  margin-left: 5px;
-  height: 400px;
-  width: 410px;
+  margin-top: 2.5%;
+  margin-left: 0%;
+  height: 70%;
+  width: 95%;
+  font-size: 1.35vw;
+  color: grey;
   z-index: 0;
 }
 
 #reload{
+  display:none;
   position: absolute;
   top: 130px;
   right: 10px;
-  height: 25px;
-  width: 25px;
+  height: 5%;
+  width: 5%;
   z-index: 1;
   border: 0.5px solid grey;
 }
 
 .reload{
+  display: none;
   position: relative;
   opacity: 0.4;
 }
 
 #AreaMinText{
     position: absolute;
-    top: 25px;
+    top: 250%;
     left: 0px;
-    width: 70px;
-    height: 30px;
-    font-size: 11pt;
+    width: 15%;
+    height: 600%;
+    font-size: 0.8vw;
+    border: none;
+    color: grey;
+    border-bottom: 1px solid #FBE789; 
 }
 
 #AreaMaxText{
-        position: absolute;
-    top: 25px;
+    position: absolute;
+    top: 250%;
     right: 0px;
-    width: 70px;
-    height: 30px;
-    font-size: 11pt;
+    width: 20%;
+    height: 600%;
+    font-size: 0.8vw;
+    border: none;
+    color: grey;
+    border-bottom: 1px solid #FBE789;  
 }
 
 #statsDiv {
   position: absolute;
   background: white;
-  top: 100px;
+  top: 30%;
+  padding: 0;
   align-items: center;
-  margin-top: 30px;
-  margin-left: 5px;
-  height: 400px;
-  width: 400px;
-  font-size: 14px;
+  margin-top: 2.5%;
+  margin-left: 0%;
+  height: 65%;
+  width: 95%;
+  font-size: 1vw;
+  color: grey;
   z-index: 0;
 }
 
 #titleStats{
-  font-size: 18px;
-  padding-bottom: 10px; 
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding-left: 0.9%;
+  padding-bottom: 0.5%;
+  margin-bottom: 3%;
+  color: grey;
+  border-bottom: 1px solid #FBE789;
+  
+}
+
+.statsViz_left {
+  float: left;
+  width: 45%;
+  align-items: center;
+  height: 15%;
+  margin-bottom: 2%;
+  padding: 0;
+  border: 1px solid #FBE789;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 0.9vw;
+  align-items: center;
+}
+
+.statsViz_right {
+  float: right;
+  width: 45%;
+  align-items: center;
+  height: 15%;
+  margin-bottom: 2%;
+  padding: 0;
+  border: 1px solid #FBE789;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 0.9vw;
+  align-items: center;
+}
+
+#numberofwholebuildings {
+  height: 15%;
+  margin-bottom: 2%;
+  padding: 0;
+  border: 1px solid #FBE789;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 0.9vw;
+  align-items: center;
+   
 }
 
 .buttonBelowGround {
@@ -507,7 +647,7 @@ html, body {
   top: 10px;
   right: 0px; 
   padding-left: 5px;
-  padding-top: 5px;
+  padding-top: 0px;
   padding-bottom: 5px;
   padding-right: 5px;
 }
