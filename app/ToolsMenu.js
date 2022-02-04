@@ -164,8 +164,10 @@ define([
                 var u = this.state.filter.usageFeatures;
                 var f = this.state.filter.floorFeatures;
                 var a = this.state.filter.areaFeatures;
+                var t = this.state.filter.tenancyFeatures;
+                var s = this.state.filter.statusFeatures;
 
-                var expressions = [h, u, f, a];
+                var expressions = [h, u, f, a, t, s];
                 var combinedExpression = expressions.filter(item => item != undefined).join(" AND ");
 
                 return combinedExpression;
