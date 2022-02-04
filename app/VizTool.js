@@ -129,7 +129,7 @@ define([
                     domCtr.destroy(dom.byId("reload"));
                 }
              
-                if (viz === "tenany") {
+                if (viz === "tenancy") {
                     domStyle.set(dom.byId("viz-usage"), { "opacity": 0.3});
                     domStyle.set(dom.byId("viz-white"), { "opacity": 0.3});
                     domStyle.set(dom.byId("viz-tenancy"), { "opacity": 1});
