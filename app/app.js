@@ -221,6 +221,11 @@ define([
                                 combinedFilteredFeatures: undefined
                             }
                         });
+                     // retrieve distinct values of tenancy attribute from feature service to create UI (filter dropdowns)
+                    queryTools.distinctValues_ten(this.settings.layer1, this.settings.tenancyname, this.settings.OIDname, function (distinctValues_ten) {
+
+                        distinctValues_ten.sort();
+                        this.settings.values_ten = distinctValues_ten;
                     }.bind(this));
 
                 }.bind(this)).otherwise(function (err) {
