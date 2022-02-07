@@ -102,7 +102,7 @@ define([
                 var groupPercentValue = 0;
 
                 if (settings.name !== "Zurich") {
-                    groupPercentValue = "2";
+                    groupPercentValue = "0";
                 }
 
                 var chart = AmCharts.makeChart("chartDiv", {
