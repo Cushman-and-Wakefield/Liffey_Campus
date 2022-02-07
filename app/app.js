@@ -196,6 +196,7 @@ define([
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
 
                         distinctValues.sort();
+                        console.info(distinctValues);
                         this.settings.values = distinctValues;
 
                         // initiliaze tools menu with state
