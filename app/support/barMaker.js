@@ -209,7 +209,7 @@ define([
                     settings.layer1.renderer = applyRenderer.createRendererVVbar(min, max, color, settings.areaname);
                     
                     //view.environment.lighting.directShadowsEnabled = false;
-                    view.environment.lighting.ambientOcclusionEnabled = false;
+                    //view.environment.lighting.ambientOcclusionEnabled = false;
                 });
 
                 on(dom.byId("reload"), "click", function (event) {
@@ -277,7 +277,7 @@ define([
                     settings.layer1.renderer = applyRenderer.createRendererVVbar(min, max, color, settings.areaname);
                     
                     //view.environment.lighting.directShadowsEnabled = false;
-                    view.environment.lighting.ambientOcclusionEnabled = false;
+                    //view.environment.lighting.ambientOcclusionEnabled = false;
                 });
 
                 on(dom.byId("reload"), "click", function (event) {
