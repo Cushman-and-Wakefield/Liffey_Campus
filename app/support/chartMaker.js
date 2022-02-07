@@ -66,7 +66,6 @@ define([
                     return b.area - a.area;
                 });
              
-                console.info(chartData);
                 return chartData;
             },
          
@@ -96,6 +95,11 @@ define([
                    for (var i = 0; i < chartData_ten.length; i++) {
                        chartData_ten[i].area = Math.round(chartData_ten[i].area);
                    }
+             
+                   chartData_ten.sort((a, b) => {
+                    return b.area - a.area;
+                   });
+             
                    return chartData_ten;
                },
 
@@ -113,6 +117,7 @@ define([
                 var chart = AmCharts.makeChart("chartDiv", {
                     "type": "pie",
                     "theme": "light",
+                    "hideCredits":true,
                     "dataProvider": data,
                     "valueField": "area",
                     "titleField": "usage",
