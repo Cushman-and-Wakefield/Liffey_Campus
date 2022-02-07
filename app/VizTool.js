@@ -392,12 +392,12 @@ define([
                    if (window.innerWidth > 1280) {
                      // Then log this message to the console
                      barMaker.createChart(initData, initCharts.area, settings, "city", this.view, function (state) {
-                        this.menu.setLoadingState("loaded");
+                        //this.menu.setLoadingState("loaded");
                      }.bind(this));
                    }
                    else {
                       barMaker.createChart_small(initData, initCharts.area, settings, "city", this.view, function (state) {
-                        this.menu.setLoadingState("loaded");
+                        //this.menu.setLoadingState("loaded");
                       }.bind(this));
                    }
                    }
@@ -421,17 +421,17 @@ define([
                    if (window.innerWidth > 1280) {
                      // Then log this message to the console
                      barMaker.createChart_exp(initData, initCharts.leaseexpiry, settings, "city", this.view, function (state) {
-                      this.menu.setLoadingState("loaded");
+                      //this.menu.setLoadingState("loaded");
                      }.bind(this));
                    }
                    else {
                       barMaker.createChart_exp_small(initData, initCharts.leaseexpiry, settings, "city", this.view, function (state) {
-                       this.menu.setLoadingState("loaded");
+                       //this.menu.setLoadingState("loaded");
                       }.bind(this));
                    }
                    }
                    checkMediaQuery();
-                   //this.menu.setLoadingState("loaded");
+                   this.menu.setLoadingState("loaded");
 
                     /*barMaker.createChart_exp(initData, initCharts.leaseexpiry, settings, "city", this.view, function (state) {
                         this.menu.setLoadingState("loaded");
@@ -450,17 +450,17 @@ define([
                    if (window.innerWidth > 1280) {
                      // Then log this message to the console
                      barMaker.createChart_rev(initData, initCharts.reviewdate, settings, "city", this.view, function (state) {
-                        this.menu.setLoadingState("loaded");
+                        //this.menu.setLoadingState("loaded");
                     }.bind(this));
                    }
                    else {
                       barMaker.createChart_rev_small(initData, initCharts.reviewdate, settings, "city", this.view, function (state) {
-                        this.menu.setLoadingState("loaded");
+                        //this.menu.setLoadingState("loaded");
                     }.bind(this));
                    }
                    }
                    checkMediaQuery();
-                   //this.menu.setLoadingState("loaded");
+                   this.menu.setLoadingState("loaded");
 
                     /*barMaker.createChart_rev(initData, initCharts.reviewdate, settings, "city", this.view, function (state) {
                         this.menu.setLoadingState("loaded");
@@ -577,12 +577,12 @@ define([
                         if (window.innerWidth > 1280) {
                           // Then log this message to the console
                           barMaker.createChart(selection, barData, settings, "building", view, function (state) {
-                            menu.setLoadingState(state);
+                            //menu.setLoadingState(state);
                         });
                         }
                         else {
                            barMaker.createChart_small(selection, barData, settings, "building", view, function (state) {
-                            menu.setLoadingState(state);
+                            //menu.setLoadingState(state);
                         });
                         }
                         }
@@ -613,17 +613,17 @@ define([
                         if (window.innerWidth > 1280) {
                           // Then log this message to the console
                           barMaker.createChart_exp(selection, barData, settings, "building", view, function (state) {
-                           menu.setLoadingState(state);
+                           //menu.setLoadingState(state);
                         });
                         }
                         else {
                            barMaker.createChart_exp_small(selection, barData, settings, "building", view, function (state) {
-                            menu.setLoadingState(state);
+                            //menu.setLoadingState(state);
                         });
                         }
                         }
                         checkMediaQuery();
-                        //menu.setLoadingState(state);
+                        menu.setLoadingState(state);
                      
                         /*barMaker.createChart_exp(selection, barData, settings, "building", view, function (state) {
                             menu.setLoadingState(state);
@@ -649,17 +649,17 @@ define([
                         if (window.innerWidth > 1280) {
                           // Then log this message to the console
                           barMaker.createChart_rev(selection, barData, settings, "building", view, function (state) {
-                            menu.setLoadingState(state);
+                            //menu.setLoadingState(state);
                         });
                         }
                         else {
                           barMaker.createChart_rev_small(selection, barData, settings, "building", view, function (state) {
-                            menu.setLoadingState(state);
+                            //menu.setLoadingState(state);
                         });
                         }
                         }
                         checkMediaQuery();
-                        //menu.setLoadingState(state);
+                        menu.setLoadingState(state);
                      
                         /*barMaker.createChart_rev(selection, barData, settings, "building", view, function (state) {
                             menu.setLoadingState(state);
