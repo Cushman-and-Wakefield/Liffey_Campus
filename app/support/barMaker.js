@@ -216,8 +216,8 @@ define([
 
                     settings.layer1.renderer = applyRenderer.createRendererVV(selection, settings.areaname);
                     
-                    view.environment.lighting.directShadowsEnabled = true;
-                    view.environment.lighting.ambientOcclusionEnabled = true;
+                    //view.environment.lighting.directShadowsEnabled = true;
+                    //view.environment.lighting.ambientOcclusionEnabled = true;
                 });
 
             },
