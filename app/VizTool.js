@@ -402,7 +402,7 @@ define([
                    }
                    }
                    checkMediaQuery();
-                   //this.menu.setLoadingState("loaded");
+                   this.menu.setLoadingState("loaded");
 
                     /*barMaker.createChart(initData, initCharts.area, settings, "city", this.view, function (state) {
                         this.menu.setLoadingState("loaded");
@@ -587,7 +587,7 @@ define([
                         }
                         }
                         checkMediaQuery();
-                        //menu.setLoadingState(state);
+                        menu.setLoadingState(state);
                      
                         /*barMaker.createChart(selection, barData, settings, "building", view, function (state) {
                             menu.setLoadingState(state);
