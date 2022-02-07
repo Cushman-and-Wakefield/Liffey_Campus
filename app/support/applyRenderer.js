@@ -189,6 +189,67 @@ define([
                     }]
 
                 });
+            },
+            //For Lease Expiry Bar Chart and Review Date Bar Chart
+            createRendererVV_exp: function (selection, fieldname) {
+
+                var totalrange = [];
+
+                
+                for (var j = 0; j < selection.length; j++) {
+                    if (selection[j].attributes[fieldname] !== null) {
+                        totalrange.push(selection[j].attributes[fieldname]);
+                    }
+                }
+
+                var year_max = Math.ceil(Math.max.apply(Math, totalrange));
+                var year_min = Math.floor(Math.min.apply(Math, totalrange));
+
+                return new UniqueValueRenderer({
+                    defaultSymbol: new MeshSymbol3D({
+                        symbolLayers: [new FillSymbol3DLayer({
+                            material: {
+                                color: "white"
+                            }
+                        })]
+                    }),
+                    defaultLabel: "N.A.",
+                    visualVariables: [{
+                        type: "color",
+                        field: fieldname,
+                        stops: [
+                            { value: year_min, color: "#FBE789" },
+                            { value: year_max, color: "#1B90A7" }
+                        ]
+                    }]
+
+                });
+            },
+
+            createRendererVVbar: function (year, color, fieldname) {
+
+                var defaultcolor = [135, 135, 135, 0.2];
+
+                return new UniqueValueRenderer({
+                    defaultSymbol: new MeshSymbol3D({
+                        symbolLayers: [new FillSymbol3DLayer({
+                            material: {
+                                color: defaultcolor
+                            }
+                        })]
+                    }),
+                    defaultLabel: "N.A.",
+                    visualVariables: [{
+                        type: "color",
+                        field: fieldname,
+                        stops: [
+                            { value: year-1, color: defaultcolor },
+                            { value: year, color: color },
+                            { value: year+1, color: defaultcolor }
+                        ]
+                    }]
+
+                });
             }
         };
     }
