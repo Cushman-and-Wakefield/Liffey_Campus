@@ -101,12 +101,17 @@ define([
 
 
                 domCtr.create("div", { id: "titleStats", innerHTML: "Statistics" }, "statsDiv");
-                domCtr.create("div", { id: "numberofunits", innerHTML: "<b>Number of Units:     </b>" }, "statsDiv");
-                domCtr.create("div", { id: "usage", innerHTML: "<b>Most common usage:       </b>" }, "statsDiv");
-                domCtr.create("div", { id: "averagearea", innerHTML: "<b>Average Area:      </b>" }, "statsDiv");
-                domCtr.create("div", { id: "maxarea", innerHTML: "<b>Max Area:      </b>" }, "statsDiv");
-                domCtr.create("div", { id: "averagefloor", innerHTML: "<b>Average Floor Number:     </b>" }, "statsDiv");
-                domCtr.create("div", { id: "maxfloor", innerHTML: "<b>Max Floor Number:     </b>" }, "statsDiv");
+                domCtr.create("div", { id: "numberofwholebuildings", innerHTML: "<small>Number of Buildings     <br></small>" }, "statsDiv");
+                //domCtr.create("div", { id: "numberofunits", innerHTML: "<b>Number of Units:     </b>" }, "statsDiv");
+                domCtr.create("div", { className: "statsViz_left", id: "usage", innerHTML: "<small>Most Common Usage       <br></small>" }, "statsDiv");
+                domCtr.create("div", { className: "statsViz_right", id: "tenancy", innerHTML: "<small>Largest Tenant       <br></small>" }, "statsDiv");
+                domCtr.create("div", { className: "statsViz_left", id: "totalarea", innerHTML: "<small>Total Area     <br></small>" }, "statsDiv");
+                //domCtr.create("div", { id: "averagearea", innerHTML: "<small>Average Area      <br></small>" }, "statsDiv");
+                //domCtr.create("div", { className: "statsViz_right", id: "maxarea", innerHTML: "<small>Max Area      <br></small>" }, "statsDiv");
+                domCtr.create("div", { className: "statsViz_right", id: "maxfloor", innerHTML: "<small>Max Floor Number    <br></small>" }, "statsDiv");
+                //domCtr.create("div", { className: "statsViz_right", id: "averagefloor", innerHTML: "<small>Average Floor Number     <br></small>" }, "statsDiv");
+                domCtr.create("div", { className: "statsViz_left", id: "nextexpiry", innerHTML: "<small>Next Lease Expiry     <br></small>" }, "statsDiv");
+                domCtr.create("div", { className: "statsViz_right", id: "nextreview", innerHTML: "<small>Next Review     <br></small>" }, "statsDiv");
 
             },
 
@@ -189,7 +194,7 @@ define([
                     var query = settings.layer1.createQuery();
 
                     query.returnGeometry = false;
-                    query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname, settings.tenancyname];
+                    query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname, settings.tenancyname, settings.leaseexpiryname, settings.reviewdatename, settings.reviewtypename, settings.buildingname, settings.statusname, settings.exactexpirydatename, settings.exactreviewdatename];
 
                     settings.layer1.queryFeatures(query).then(function (result) {
                         var currentResult = result.features;
@@ -316,7 +321,7 @@ define([
                 var query = settings.layer1.createQuery();
 
                 query.returnGeometry = false;
-                query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname, settings.tenancyname];
+                query.outFields = [settings.OIDname, settings.usagename, settings.areaname, settings.floorname, settings.buildingIDname, settings.tenancyname, settings.leaseexpiryname, settings.reviewdatename, settings.reviewtypename, settings.buildingname, settings.statusname, settings.exactexpirydatename, settings.exactreviewdatename];
 
                 settings.layer1.queryFeatures(query).then(function (result) {
 
