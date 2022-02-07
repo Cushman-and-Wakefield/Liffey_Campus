@@ -256,9 +256,8 @@ define([
 
                 dom.byId("buildingInfo").innerHTML = "Number of Buildings: " + data.numberofBuildings;
                 dom.byId("numberofwholebuildings").innerHTML = "<small>Number of Buildings      <br></small>" + data.numberofWholeBuildings;
-                dom.byId("numberofunits").innerHTML = "<b>Number of Units:</b>      " + data.numberofUnits;
-                dom.byId("usage").innerHTML = "<b>Most common usage:</b>        " + data.mostCommonUsage.usage;
-                 dom.byId("tenancy").innerHTML = "<small>Largest Tenant<br></small>        " + data.mostCommonTenancy.tenancy;
+                dom.byId("usage").innerHTML = "<small>Most Common Usage<br></small>        " + data.mostCommonUsage.usage;
+                dom.byId("tenancy").innerHTML = "<small>Largest Tenant<br></small>        " + data.mostCommonTenancy.tenancy;
                 dom.byId("totalarea").innerHTML = "<small>Total Area<br></small>       " + data.totalArea + " m2";
                 dom.byId("maxfloor").innerHTML = "<small>Max Floor Number<br></small>      " + data.floorMax;
                 dom.byId("nextexpiry").innerHTML = "<small>Next Lease Expiry<br></small>      " + data.nextExpiry;
