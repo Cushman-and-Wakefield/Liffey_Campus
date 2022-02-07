@@ -48,14 +48,21 @@ define([
 
                 var chartData = {
                     numberofUnits: null,
+                    numberofWholeBuildings: null,
                     numberofBuildings: null,
                     mostCommonUsage: {
                         usage: null
                     },
+                    mostCommonTenancy: {
+                       tenancy: null
+                    },
                     averageArea: null,
+                    totalArea: null,
                     areaMax: null,
                     floorMax: null,
-                    averageFloor: null
+                    averageFloor: null,
+                    nextExpiry: null,
+                    nextReview: null
                 };
 
                 function sum (a, b) {
@@ -81,6 +88,27 @@ define([
                 } else{
                     chartData.mostCommonUsage = usageData[usageData.length - 1];
                 }
+             
+                // tenancy data
+
+                var tenancyData = chartMaker.createChartData_ten(data, settings);
+
+                tenancyData.sort(function (a, b) { return a.area - b.area; });
+
+                var tenancyAreaSum = 0;
+
+                for (var i = 0; i < tenancyData.length; i++) {
+                        tenancyAreaSum += tenancyData[i].area;
+                }
+                
+                if (tenancyAreaSum === 0){
+                    chartData.mostCommonTenancy.tenancy = "None";
+                } else if ((tenancyData[tenancyData.length - 1].tenancy === "Vacant") && (tenancyData.length > 1)) {
+                    chartData.mostCommonTenancy = tenancyData[tenancyData.length - 2];
+                }
+                else {
+                    chartData.mostCommonTenancy = tenancyData[tenancyData.length - 1];
+                } 
 
                 // area data
                 
@@ -95,6 +123,12 @@ define([
                 areaData.sort(function (a, b) { return a - b; });
 
                 chartData.areaMax = Math.round(areaData[areaData.length - 1]);
+             
+                for (let i = 0; i < areaData.length; i++) {
+                      chartData.totalArea += areaData[i];
+                }
+                
+                chartData.totalArea = Math.round(chartData.totalArea);
 
                 var areaSum = areaData.reduce(sum, 0);
 
@@ -129,6 +163,54 @@ define([
                 if (floorData.length === 1){
                     chartData.averageFloor = floorData[0];
                 }
+             
+                // lease expiry data
+
+                var leaseexpiryData = [];
+
+                for (var k = 0; k < data.length; k++) {
+                    if (data[k].attributes[settings.exactexpirydatename] !== null) {
+                        leaseexpiryData.push(new Date(data[k].attributes[settings.exactexpirydatename]));
+                    }
+                }
+
+                leaseexpiryData = leaseexpiryData.sort();
+                leaseexpiryData = leaseexpiryData[0];
+             
+                if (leaseexpiryData === undefined || leaseexpiryData === null){
+                    chartData.nextExpiry = "None";
+                } else{
+                    var date = leaseexpiryData.getDate();
+                    var month = leaseexpiryData.getMonth(); //Be careful! January is 0 not 1
+                    var year = leaseexpiryData.getFullYear();
+
+                    var dateString = date + "-" +(month + 1) + "-" + year;
+                    chartData.nextExpiry = dateString;
+                }
+             
+                // review data
+
+                var reviewData = [];
+
+                for (var k = 0; k < data.length; k++) {
+                    if (data[k].attributes[settings.exactreviewdatename] !== null) {
+                        reviewData.push(new Date(data[k].attributes[settings.exactreviewdatename]));
+                    }
+                }
+
+                reviewData = reviewData.sort();
+                reviewData = reviewData[0];
+             
+                if (reviewData === undefined || reviewData === null){
+                    chartData.nextReview = "None";
+                } else{
+                    var date = reviewData.getDate();
+                    var month = reviewData.getMonth(); //Be careful! January is 0 not 1
+                    var year = reviewData.getFullYear();
+
+                    var dateString = date + "-" +(month + 1) + "-" + year;
+                    chartData.nextReview = dateString;
+                }
 
                 // building data
 
@@ -147,6 +229,24 @@ define([
                 var buildingDataunique = buildingData.filter(onlyUnique);
 
                 chartData.numberofBuildings = buildingDataunique.length;
+             
+                // whole building data
+
+                var enitrebuildingData = [];
+
+                for (var k = 0; k < data.length; k++) {
+                    if (data[k].attributes[settings.buildingname] !== null) {
+                        enitrebuildingData.push(data[k].attributes[settings.buildingname]);
+                    }
+                }
+
+                function onlyUnique (value, index, self) {
+                    return self.indexOf(value) === index;
+                }
+
+                var enitrebuildingDataunique = enitrebuildingData.filter(onlyUnique);
+
+                chartData.numberofWholeBuildings = enitrebuildingDataunique.length;
 
                 return chartData;
 
@@ -155,12 +255,14 @@ define([
             createChart: function(data, callback){
 
                 dom.byId("buildingInfo").innerHTML = "Number of Buildings: " + data.numberofBuildings;
+                dom.byId("numberofwholebuildings").innerHTML = "<small>Number of Buildings      <br></small>" + data.numberofWholeBuildings;
                 dom.byId("numberofunits").innerHTML = "<b>Number of Units:</b>      " + data.numberofUnits;
                 dom.byId("usage").innerHTML = "<b>Most common usage:</b>        " + data.mostCommonUsage.usage;
-                dom.byId("averagearea").innerHTML = "<b>Average Area:</b>       " + data.averageArea + " m2";
-                dom.byId("maxarea").innerHTML = "<b>Max Area:</b>       " + data.areaMax + " m2";
-                dom.byId("averagefloor").innerHTML = "<b>Average Floor Number:</b>      " + data.averageFloor;
-                dom.byId("maxfloor").innerHTML = "<b>Max Floor Number:</b>      " + data.floorMax;
+                 dom.byId("tenancy").innerHTML = "<small>Largest Tenant<br></small>        " + data.mostCommonTenancy.tenancy;
+                dom.byId("totalarea").innerHTML = "<small>Total Area<br></small>       " + data.totalArea + " m2";
+                dom.byId("maxfloor").innerHTML = "<small>Max Floor Number<br></small>      " + data.floorMax;
+                dom.byId("nextexpiry").innerHTML = "<small>Next Lease Expiry<br></small>      " + data.nextExpiry;
+                dom.byId("nextreview").innerHTML = "<small>Next Review<br></small>      " + data.nextReview;
 
                 callback("loaded");
 
