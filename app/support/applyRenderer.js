@@ -226,7 +226,7 @@ define([
                 });
             },
 
-            createRendererVVbar: function (year, color, fieldname) {
+            createRendererVVbar_exp: function (year, color, fieldname) {
 
                 var defaultcolor = [135, 135, 135, 0.2];
 
