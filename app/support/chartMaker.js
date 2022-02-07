@@ -61,6 +61,11 @@ define([
                 for (var i = 0; i < chartData.length; i++) {
                     chartData[i].area = Math.round(chartData[i].area);
                 }
+             
+                chartData.sort((a, b) => {
+                    return b.area - a.area;
+                });
+             
                 console.info(chartData);
                 return chartData;
             },
