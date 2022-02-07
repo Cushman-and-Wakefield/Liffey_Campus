@@ -195,8 +195,7 @@ define([
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
 
-                        //distinctValues.sort();
-                        console.info(distinctValues);
+                        distinctValues.sort();
                         this.settings.values = distinctValues;
 
                         // initiliaze tools menu with state
