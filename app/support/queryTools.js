@@ -52,7 +52,6 @@ define([
                     for (var i = 0; i < selection.length; i++) {
                         values.push(selection[i].attributes[fieldname]);
                     }
-                    console.info(values);
                     values.sort(function (a, b) { return a - b; });
 
                     for (var j = 0; j < values.length; j++) {
@@ -60,7 +59,6 @@ define([
                             values.splice(j, 1);
                         }
                     }
-                    console.info(values);
 
                     callback(values);
 
