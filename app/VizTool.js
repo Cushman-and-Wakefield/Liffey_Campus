@@ -331,20 +331,53 @@ define([
 
                     domStyle.set(dom.byId("chartDiv"), { "opacity": 1 });
                     domStyle.set(dom.byId("statsDiv"), { "opacity": 0 });
+                 
+                    function checkMediaQuery() {
+                    
+                    // If the inner width of the window is greater then 768px
+                    if (window.innerWidth > 1280) {
+                      // Then log this message to the console
+                      chartMaker.createChart(this.view, initCharts.usage, settings, "city", function (state) {
+                           this.menu.setLoadingState("loaded");
+                     }.bind(this));
+                    }
+                    else {
+                       chartMaker.createChart_small(this.view, initCharts.usage, settings, "city", function (state) {
+                            this.menu.setLoadingState("loaded");
+                     }.bind(this));
+                    }
+                   }
+                   checkMediaQuery();
 
-                    chartMaker.createChart(this.view, initCharts.usage, settings, "city", function (state) {
+                    /*chartMaker.createChart(this.view, initCharts.usage, settings, "city", function (state) {
                         this.menu.setLoadingState("loaded");
-                    }.bind(this));
+                    }.bind(this));*/
                 }
                 if (vizName === "tenancy") {
                     settings.layer1.renderer = applyRenderer.createRenderer(settings.values_ten, settings.color, settings.tenancyname);
 
                     domStyle.set(dom.byId("chartDiv"), { "opacity": 1 });
                     domStyle.set(dom.byId("statsDiv"), { "opacity": 0 });
-
-                    chartMaker.createChart_ten(this.view, initCharts.tenancy, settings, "city", function (state) {
+                 
+                    function checkMediaQuery() {
+                    // If the inner width of the window is greater then 768px
+                    if (window.innerWidth > 1280) {
+                      // Then log this message to the console
+                      chartMaker.createChart_ten(this.view, initCharts.tenancy, settings, "city", function (state) {
                         this.menu.setLoadingState("loaded");
-                    }.bind(this));
+                      }.bind(this));
+                    }
+                    else {
+                        chartMaker.createChart_ten_small(this.view, initCharts.tenancy, settings, "city", function (state) {
+                            this.menu.setLoadingState("loaded");
+                        }.bind(this));
+                    }
+                   }
+                   checkMediaQuery();
+
+                    /*chartMaker.createChart_ten(this.view, initCharts.tenancy, settings, "city", function (state) {
+                        this.menu.setLoadingState("loaded");
+                    }.bind(this));*/
                 }
              
                 if (vizName === "area") {
@@ -466,9 +499,27 @@ define([
                         domStyle.set(dom.byId("statsDiv"), { "opacity": 0 });
 
                         var chartData = chartMaker.createChartData(selection, settings);
-                        chartMaker.createChart(view, chartData, settings, "building", function (state) {
+                     
+                        function checkMediaQuery() {
+                    
+                        // If the inner width of the window is greater then 768px
+                        if (window.innerWidth > 1280) {
+                          // Then log this message to the console
+                          chartMaker.createChart(view, chartData, settings, "building", function (state) {
                             menu.setLoadingState(state);
-                        });
+                            });
+                        }
+                        else {
+                           chartMaker.createChart_small(view, chartData, settings, "building", function (state) {
+                            menu.setLoadingState(state);
+                            });
+                        }
+                       }
+                       checkMediaQuery();
+                     
+                        /*chartMaker.createChart(view, chartData, settings, "building", function (state) {
+                            menu.setLoadingState(state);
+                        });*/
 
                         var data = statsMaker.createChartData(selection, settings);
                         statsMaker.createChart(data, function (state) {
@@ -483,9 +534,27 @@ define([
                         domStyle.set(dom.byId("statsDiv"), { "opacity": 0 });
 
                         var chartData = chartMaker.createChartData_ten(selection, settings);
-                        chartMaker.createChart_ten(view, chartData, settings, "building", function (state) {
+                     
+                        function checkMediaQuery() {
+                    
+                        // If the inner width of the window is greater then 768px
+                        if (window.innerWidth > 1280) {
+                          // Then log this message to the console
+                          chartMaker.createChart_ten(view, chartData, settings, "building", function (state) {
                             menu.setLoadingState(state);
                         });
+                        }
+                        else {
+                           chartMaker.createChart_ten_small(view, chartData, settings, "building", function (state) {
+                            menu.setLoadingState(state);
+                        });
+                        }
+                       }
+                       checkMediaQuery();
+
+                        /*chartMaker.createChart_ten(view, chartData, settings, "building", function (state) {
+                            menu.setLoadingState(state);
+                        });*/
 
                         var data = statsMaker.createChartData(selection, settings);
                         statsMaker.createChart(data, function (state) {
