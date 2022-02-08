@@ -44,7 +44,14 @@ define([
                     symbol: new MeshSymbol3D({
                         symbolLayers: [
                             new FillSymbol3DLayer({
-                                material: { color: [251, 231, 137, 1] }
+                                material: { //color: [251, 231, 137, 1] 
+                                color: color
+                                },
+                                edges: {
+                                  type: "solid",
+                                  size: 1.2,
+                                  color: [50, 50, 50, 0.2]
+                                }}
                             })
                         ]
                     })
