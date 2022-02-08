@@ -152,13 +152,13 @@ define([
                 this.view.environment.lighting.directShadowsEnabled = true;
 
                 // create search widget
-                //var searchWidget = new Search({
-                    //view: this.view
-                //});
+                /*var searchWidget = new Search({
+                    view: this.view
+                });
                 this.view.ui.add(searchWidget, {
                     position: "top-right",
                     index: 2
-                });
+                });*/
 
                 // create home button that leads back to welcome page
                 var home = domCtr.create("div", { className: "button", id: "homeButton", innerHTML: "Home" }, header);
