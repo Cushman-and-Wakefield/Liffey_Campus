@@ -154,7 +154,7 @@ define([
                 // create search widget
                 //var searchWidget = new Search({
                     //view: this.view
-                });
+                //});
                 this.view.ui.add(searchWidget, {
                     position: "top-right",
                     index: 2
