@@ -70,9 +70,8 @@ define([
         // application settings
         var settings_demo = {
             name: "Demo",
-            url: "https://cwireland.maps.arcgis.com",           // portal URL for config
-            //webscene: "769dba86607e4662a9e28f2e02c305f6",   // portal item ID of the webscene
-            webscene: "dfdf7ab912d14d9d920db64cc9c7368f",
+            url: "https://cwireland.maps.arcgis.com",           // portal URL for config 
+            webscene: "dfdf7ab912d14d9d920db64cc9c7368f",   // portal item ID of the webscene
             usagename: "Use_",                             // usage attribute (string)
             tenancyname: "Tenant",                          // tenant names (string)
             floorname: "Floor1",                           // floor attribute (string)
@@ -153,8 +152,8 @@ define([
                 this.view.environment.lighting.directShadowsEnabled = true;
 
                 // create search widget
-                var searchWidget = new Search({
-                    view: this.view
+                //var searchWidget = new Search({
+                    //view: this.view
                 });
                 this.view.ui.add(searchWidget, {
                     position: "top-right",
