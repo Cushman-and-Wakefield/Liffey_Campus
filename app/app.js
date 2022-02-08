@@ -183,7 +183,6 @@ define([
 
                     // retrieve active layer from webscene
                     this.settings.layer1 = this.scene.layers.getItemAt(0);
-                    this.view.popup.autoOpenEnabled = false;
 
                     // create background layer (identical copy of activ layer) for highlighting and add it to the scene
                     this.settings.layer2 = new SceneLayer({
@@ -194,6 +193,12 @@ define([
 
                     this.settings.layer1.visible = true;
                     this.settings.layer2.visible = false;
+                 
+                    // Set a simple string to a popupTemplate's content
+                   // The string references a value from the POP_2015 attribute field
+                   this.settings.layer1.popupTemplate = {
+                     content: "2020 people live in this census tract"
+                   };
 
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
