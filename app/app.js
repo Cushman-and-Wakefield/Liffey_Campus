@@ -57,7 +57,8 @@ define([
 
     "c-through/ToolsMenu",
     "c-through/welcome",
-    "c-through/support/queryTools"
+    "c-through/support/queryTools",
+    "c-through/InfoWidget"
 
 ], function (
     declare, esriConfig,
@@ -65,7 +66,7 @@ define([
     BasemapToggle, Home,
     dom, on, domCtr, win, domStyle,
     Search,
-    ToolsMenu, Welcome, queryTools) {
+    ToolsMenu, Welcome, queryTools, InfoWidget) {
 
         // application settings
         var settings_demo = {
@@ -194,7 +195,10 @@ define([
                     this.settings.layer1.visible = true;
                     this.settings.layer2.visible = false;
                  
-                    // Set a simple string to a popupTemplate's content
+                    // initialize info widget
+                    var infoWidget = new InfoWidget(this.view, this.state);
+                 
+                   /* // Set a simple string to a popupTemplate's content
                    // The string references a value from the POP_2015 attribute field
                    this.settings.layer1.popupTemplate = {
                      title: "<b>Part of {this.settings.buildingname} and rented by {this.settings.tenancyname}</b>",
@@ -204,7 +208,7 @@ define([
                       value: {
                         sourceURL: "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
                       }
-                   };
+                   };*/
 
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
