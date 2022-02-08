@@ -29,6 +29,7 @@ define([
     constructor: function(view) {
 
       this.view = view;
+     this.state = view.state;
 
       view.popup.watch("visible", function(newValue) {
         if (!newValue) {
