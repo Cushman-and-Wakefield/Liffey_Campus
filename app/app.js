@@ -197,7 +197,7 @@ define([
                     // Set a simple string to a popupTemplate's content
                    // The string references a value from the POP_2015 attribute field
                    this.settings.layer1.popupTemplate = {
-                     title: "<b>Part of {buildingname} and rented by {tenancyname}</b>",
+                     title: "<b>Part of {this.settings.buildingname} and rented by {this.settings.tenancyname}</b>",
                       type: "image", // Autocasts as new ImageMediaInfo()
                       caption: "tree species",
                       // Autocasts as new ImageMediaInfoValue()
