@@ -127,7 +127,7 @@ define([
                     "fontSize": 12,
                     "fontFamily": "Avenir LT W01 65 Medium",
                     "radius": 100,
-                    "marginTop": 30,
+                    "marginTop": 50,
                     "pieAlpha": 0.8,
                     "sequencedAnimation": true,
                     "balloon": {
@@ -210,7 +210,7 @@ define([
                     "fontSize": 7,
                     "fontFamily": "Avenir LT W01 65 Medium",
                     "radius": 40,
-                    "marginTop": 20,
+                    "marginTop": 40,
                     "pieAlpha": 0.8,
                     "sequencedAnimation": true,
                     "balloon": {
@@ -293,7 +293,7 @@ define([
                     "fontSize": 12,
                     "fontFamily": "Avenir LT W01 65 Medium",
                     "radius": 100,
-                    "marginTop": 30,
+                    "marginTop": 50,
                     "pieAlpha": 0.8,
                     "sequencedAnimation": true,
                     "balloon": {
@@ -376,7 +376,7 @@ define([
                     "fontSize": 7,
                     "fontFamily": "Avenir LT W01 65 Medium",
                     "radius": 40,
-                    "marginTop": 20,
+                    "marginTop": 40,
                     "pieAlpha": 0.8,
                     "sequencedAnimation": true,
                     "balloon": {
