@@ -133,9 +133,9 @@ define([
 
                 // load scene with portal ID
                 this.scene = new WebScene({
-                    portalItem: {
+                    /*portalItem: {
                         id: this.settings.webscene
-                    },
+                    },*/
                     basemap: "osm-standard-relief",
                     ground: "world-elevation"
                 });
