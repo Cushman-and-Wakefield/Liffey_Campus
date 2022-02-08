@@ -71,8 +71,7 @@ define([
                                   type: "solid",
                                   size: 1.2,
                                   color: [50, 50, 50, 0.2]
-                                }
-                            }
+                                } 
                         })]
                     }),
                     defaultLabel: "N.A.",
