@@ -48,7 +48,7 @@ define([
                                 },
                                 edges: {
                                   type: "solid",
-                                  size: 1.2,
+                                  size: 0.5,
                                   color: [50, 50, 50, 0.2]
                                 }
                             })
@@ -64,12 +64,7 @@ define([
                         symbolLayers: [new FillSymbol3DLayer({
                             material: {
                                 color: [135, 135, 135, 0.2]
-                                },
-                                edges: {
-                                  type: "solid",
-                                  size: 1.2,
-                                  color: [50, 50, 50, 0.2]
-                                } 
+                                }
                         })]
                     }),
                     defaultLabel: "N.A.",
