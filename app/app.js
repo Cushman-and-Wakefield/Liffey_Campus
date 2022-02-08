@@ -38,6 +38,7 @@
 define([
     "esri/core/declare",
     "esri/config",
+    "esri/core/watchUtils",
 
     "esri/WebScene",
     "esri/views/SceneView",
@@ -61,7 +62,7 @@ define([
     "c-through/InfoWidget"
 
 ], function (
-    declare, esriConfig,
+    declare, esriConfig, watchUtils,
     WebScene, SceneView, SceneLayer, Basemap,
     BasemapToggle, Home,
     dom, on, domCtr, win, domStyle,
