@@ -137,7 +137,8 @@ define([
                     portalItem: {
                         id: this.settings.webscene
                     },
-                    basemap: "topo"
+                    basemap: "gray",
+                    ground: "world-elevation"
                 });
 
                 // create a view
