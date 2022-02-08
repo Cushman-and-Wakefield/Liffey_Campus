@@ -144,7 +144,8 @@ define([
                 this.view = new SceneView({
                     container: "viewDiv",
                     map: this.scene,
-                    qualityProfile: "high"
+                    qualityProfile: "high",
+                    popupEnabled: false
                 });
 
                 // environment settings for better visuals (shadows)
