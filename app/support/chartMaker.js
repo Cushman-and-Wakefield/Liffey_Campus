@@ -209,8 +209,8 @@ define([
                     "startRadius": 100,
                     "fontSize": 7,
                     "fontFamily": "Avenir LT W01 65 Medium",
-                    "radius": 60,
-                    "marginTop": 40,
+                    "radius": 40,
+                    "marginTop": 60,
                     "pieAlpha": 0.8,
                     "sequencedAnimation": true,
                     "balloon": {
