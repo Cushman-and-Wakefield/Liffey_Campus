@@ -137,8 +137,7 @@ define([
                         id: this.settings.webscene
                     },
                     basemap: "osm-standard-relief",
-                    ground: "world-elevation",
-                    popupEnabled: false
+                    ground: "world-elevation"
                 });
 
                 // create a view
@@ -184,6 +183,7 @@ define([
 
                     // retrieve active layer from webscene
                     this.settings.layer1 = this.scene.layers.getItemAt(0);
+                    this.view.popup.autoOpenEnabled = false;
 
                     // create background layer (identical copy of activ layer) for highlighting and add it to the scene
                     this.settings.layer2 = new SceneLayer({
