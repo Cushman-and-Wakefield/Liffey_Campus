@@ -137,15 +137,16 @@ define([
                         id: this.settings.webscene
                     },
                     basemap: "osm-standard-relief",
-                    ground: "world-elevation"
+                    ground: "world-elevation",
+                    popupEnabled: false
                 });
 
                 // create a view
                 this.view = new SceneView({
                     container: "viewDiv",
                     map: this.scene,
-                    qualityProfile: "high",
-                    popupEnabled: false
+                    qualityProfile: "high"
+                    
                 });
 
                 // environment settings for better visuals (shadows)
