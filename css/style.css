@@ -405,10 +405,6 @@ p.info {
   display: inline-block;
 }
 
-.info.space-around {
-  justify-content: space-around;
-}
-
 .info img {
   vertical-align: text-bottom;
   height: 20px;
