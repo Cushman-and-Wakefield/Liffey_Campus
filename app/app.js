@@ -47,7 +47,6 @@ define([
 
     "esri/widgets/BasemapToggle",
     "esri/widgets/Home",
-    "esri/widgets/Popup",
 
     "dojo/dom",
     "dojo/on",
@@ -65,7 +64,7 @@ define([
 ], function (
     declare, esriConfig, watchUtils,
     WebScene, SceneView, SceneLayer, Basemap,
-    BasemapToggle, Home, Popup,
+    BasemapToggle, Home,
     dom, on, domCtr, win, domStyle,
     Search,
     ToolsMenu, Welcome, queryTools, InfoWidget) {
@@ -200,7 +199,7 @@ define([
                     // initialize info widget
                     //var infoWidget = new InfoWidget(this.view, state);
                  
-                    this.view.popup.title = "Population by zip codes in Southern California";   
+                    popupTemplate.title = "Marriage in NY, Zip Code: {ZIP}",  
                  
                  
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
