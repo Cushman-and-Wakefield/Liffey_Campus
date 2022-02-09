@@ -248,7 +248,7 @@ html, body {
   animation:slide 20s infinite;
 }
 .slider{
-  width:25%;
+  width:50%;
   height:100%;
   float:left;
   position:relative;
