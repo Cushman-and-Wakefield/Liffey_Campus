@@ -200,7 +200,7 @@ define([
                     //var infoWidget = new InfoWidget(this.view, state);
                  
                     this.settings.layer1.popupTemplate = {
-                       content: "{Building_No_} people live in this census tract"
+                       content: "<h3> Part of Building {Building_No_} and rented by {Tenant} </h3>"
                      };  
 
                  
