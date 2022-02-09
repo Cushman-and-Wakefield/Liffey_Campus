@@ -209,7 +209,7 @@ define([
                        <img src='img/usage.png'> {Use_}
                        <img src="img/area.png"> {sq_m} sqm
                        <img src='img/floor.png'> {Floor}
-                       <img src="img/lease_expiry.png"> {% if Lease_Expiry == null or Lease_Expiry == "" %} Null {% else %} {Lease_Expiry} {% endif %}
+                       <img src="img/lease_expiry.png"> {% if $Lease_Expiry == null or $Lease_Expiry == "" %} Null {% else %} {Lease_Expiry} {% endif %}
                        <img src='img/review_date.png'> {Next_Review_Date1}
                        <img src='img/review_type.png'> {Review_Type}
                      </p>`
