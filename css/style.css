@@ -240,7 +240,7 @@ html, body {
   to{left:0;}
 }
 .slides{
-  width:100%;
+  width:200%;
   height:100%;
   position:relative;
   -webkit-animation:slide 20s infinite;
@@ -248,7 +248,7 @@ html, body {
   animation:slide 20s infinite;
 }
 .slider{
-  width:50%;
+  width:100%;
   height:100%;
   float:left;
   position:relative;
