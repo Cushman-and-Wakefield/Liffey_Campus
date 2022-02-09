@@ -243,9 +243,9 @@ html, body {
   width:200%;
   height:100%;
   position:relative;
-  -webkit-animation:slide 20s infinite;
-  -moz-animation:slide 20s infinite;
-  animation:slide 20s infinite;
+  -webkit-animation:slide 10s infinite;
+  -moz-animation:slide 10s infinite;
+  animation:slide 10s infinite;
 }
 .slider{
   width:50%;
@@ -275,12 +275,12 @@ html, body {
 
 /* Switch */
 .switch{
-  width:60px;
+  width:120px;
   height:10px;
   position:absolute;
   bottom:10px;
   z-index:99;
-  left:40%;
+  left:35%;
 }
 .switch > ul{
   list-style:none;
@@ -303,9 +303,9 @@ html, body {
   border-radius:50%;
   background:#f39c12;
   position:relative;
-  -webkit-animation:on 20s infinite;
-  -moz-animation:on 20s infinite;
-  animation:on 20s infinite;
+  -webkit-animation:on 10s infinite;
+  -moz-animation:on 10s infinite;
+  animation:on 10s infinite;
 }
 
 /* Animation */
