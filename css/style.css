@@ -227,6 +227,12 @@ html, body {
   right: 0px;
   width: 30%;
 }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
 
 /* Hide the images by default */
 .mySlides {
