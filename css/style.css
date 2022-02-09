@@ -228,6 +228,19 @@ html, body {
   width: 30%;
 }
 
+p.info {
+  font-size: 1rem;
+}
+
+.info img {
+  vertical-align: text-bottom;
+  height: 25px;
+}
+
+.info img:nth-child(2){
+  margin-left: 20px;
+}
+
 .containerSelect {
     position: relative;
     top: 10px;
