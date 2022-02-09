@@ -227,6 +227,18 @@ define([
                          <img src="img/Building_8_Excyte.PNG">
                        </div>
                      </div>
+                    </div>
+                     <div class="switch">
+                     <ul>
+                       <li>
+                         <div class="on"></div>
+                       </li>
+                       <li></li>
+                       <li></li>
+                       <li></li>
+                     </ul>
+                   </div>
+                 </div>
                      `
                      };  
                  
