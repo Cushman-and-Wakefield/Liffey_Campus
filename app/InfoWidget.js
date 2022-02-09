@@ -26,12 +26,12 @@ define([
 
   return declare(null, {
 
-    constructor: function(view) {
+    constructor: function(params) {
 
-      this.view = view;
-     //this.state = view.state;
+      this.settings = params.settings;
+      this.view = params.view;
 
-      view.popup.watch("visible", function(newValue) {
+      this.view.popup.watch("visible", function(newValue) {
         if (!newValue) {
           this.settings.buildingIDname = null;
         }
