@@ -229,16 +229,16 @@ html, body {
 }
 
 /* Hide the images by default */
-.pictures {
+.mySlides {
   display: none;
 }
 
-.pictures img {
+/*.mySlides img {
   height: 200px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
+}*/
 
 /* Next & previous buttons */
 .prev, .next {
