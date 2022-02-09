@@ -115,11 +115,8 @@ define([
             constructor: function () {
              var State = Accessor.createSubclass({
         properties: {
-          selectedPeriod: null,
           selectedBuilding: null,
-          hoveredBuilding: null,
-          filteredBuildings: null,
-          selectedCategory: this.settings.initCategory
+          hoveredBuilding: null
         }
       });
 
