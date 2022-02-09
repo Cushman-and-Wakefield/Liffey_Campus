@@ -214,10 +214,10 @@ define([
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>
                      
-                     <div class='pictures'>
+                     <div class='pictures fade'>
                      <img src='img/Building_8.PNG' title="Building 8">
                      </div>
-                     <div class='pictures'>
+                     <div class='pictures fade'>
                      <img src='img/Building_8_Excyte.PNG' title="Building 8 - Exyte">
                      </div>
                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
