@@ -270,7 +270,8 @@ html, body {
 .image img{
   width:auto;
   height:90%;
-  margin-left: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Switch */
