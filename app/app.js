@@ -205,8 +205,7 @@ define([
                          return "Null"
                        } else if (feature.graphic.attributes.Lease_Expiry != null){
                          return "{Lease_Expiry}"
-                       }
-                     }‍‍‍‍‍‍‍‍‍‍‍‍
+                       }}‍‍‍‍‍‍‍‍‍‍‍‍
                     
                     this.settings.layer1.popupTemplate = {
                        content: `<h6> Part of Building {Building_No_} </h6>
