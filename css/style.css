@@ -399,7 +399,7 @@ html, body {
    }
 }
 
-p.info {
+.info {
   font-size: 0.9vw;
   line-height: 1vw;
   display: inline-block;
