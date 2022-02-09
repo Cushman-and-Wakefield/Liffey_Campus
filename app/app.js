@@ -199,7 +199,7 @@ define([
                     
                     this.settings.layer1.popupTemplate = {
                      title:  "<h6> Part of Building {Building_No_} </h6>",
-                     content: `<p class='info'>
+                     content: `<div class='info'>
                        <div><img src="img/tenant.png" title="Tenant Info"> {Tenant} </div>
                        <div><img src='img/usage.png' title="Usage"> {Use_} </div>
                        <div><img src="img/area.png" title="Area"> {sq_m} sqm </div>
@@ -207,7 +207,7 @@ define([
                        <div><img src="img/lease_expiry.png" title="Lease Expiry Date"> {Lease_Expiry} </div>
                        <div><img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1} </div>
                        <div><img src='img/review_type.png' title="Review Type"> {Review_Type} </div>
-                     </p>
+                     </div>
                      
                          <!-- Slider -->
                      <div id="slider">
