@@ -206,12 +206,12 @@ define([
                        content: `<h6> Part of Building {Building_No_} </h6>
                        <p class='info'>
                        <img src="img/tenant.png" title="Tenant Info"> {Tenant} 
-                       <img src='img/usage.png'> {Use_}
-                       <img src="img/area.png"> {sq_m} sqm
-                       <img src='img/floor.png'> {Floor}
-                       <img src="img/lease_expiry.png"> {Lease_Expiry}
-                       <img src='img/review_date.png'> {Next_Review_Date1}
-                       <img src='img/review_type.png'> {Review_Type}
+                       <img src='img/usage.png' title="Usage"> {Use_}
+                       <img src="img/area.png" title="Area"> {sq_m} sqm
+                       <img src='img/floor.png' title="Floor"> {Floor}
+                       <img src="img/lease_expiry.png" title="Lease Expiry Date"> {Lease_Expiry}
+                       <img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1}
+                       <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>`
                      };  
 
