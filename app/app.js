@@ -214,37 +214,21 @@ define([
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>
                      
-                     <div class="slideshow-container">
-
-                     <div class="mySlides fade">
-                       <div class="numbertext">1 / 3</div>
-                       <img src="img/Building_8.PNG" style="width:100%">
-                       <div class="text">Caption Text</div>
+                     <div class="slider">
+                     <span id="slide-1"></span>
+                     <span id="slide-2"></span>
+                     <span id="slide-3"></span>
+                     <div class="image-container">
+                       <img src="img/Building_8.PNG" class="slide" width="500" height="300" />
+                       <img src="img/Building_8_Excyte.PNG" class="slide" width="500" height="300" />
+                       <img src="img/Building_8_Excyte.PNG" class="slide" width="500" height="300" />
                      </div>
-
-                     <div class="mySlides fade">
-                       <div class="numbertext">2 / 3</div>
-                       <img src="img/Building_8_Excyte.PNG" style="width:100%">
-                       <div class="text">Caption Two</div>
+                     <div class="buttons">
+                       <a href="#slide-1"></a>
+                       <a href="#slide-2"></a>
+                       <a href="#slide-3"></a>
                      </div>
-
-                     <div class="mySlides fade">
-                       <div class="numbertext">3 / 3</div>
-                       <img src="img/Building_8_Excyte.PNG" style="width:100%">
-                       <div class="text">Caption Three</div>
-                     </div>
-
-                     <a class="prev" onclick="InfoWidget.plusSlides(-1)">&#10094;</a>
-                     <a class="next" onclick="InfoWidget.plusSlides(1)">&#10095;</a>
-
-                     </div>
-                     <br>
-
-                     <div style="text-align:center">
-                       <span class="dot" onclick="InfoWidget.currentSlide(1)"></span> 
-                       <span class="dot" onclick="InfoWidget.currentSlide(2)"></span> 
-                       <span class="dot" onclick="InfoWidget.currentSlide(3)"></span> 
-                     </div>
+                   </div>
                      `
                      };  
                  
