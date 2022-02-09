@@ -228,6 +228,11 @@ html, body {
   width: 30%;
 }
 
+p.pictures {
+  height: 100px;
+  display: inline-block;
+}
+
 p.info {
   font-size: 0.9vw;
   line-height: 1vw;
