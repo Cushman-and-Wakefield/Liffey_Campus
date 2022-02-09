@@ -209,16 +209,11 @@ define([
                        <img src='img/usage.png'> {Use_}
                        <img src="img/area.png"> {sq_m} sqm
                        <img src='img/floor.png'> {Floor}
-                       <img src="img/lease_expiry.png"> lease()
+                       <img src="img/lease_expiry.png"> {Lease_Expiry}
                        <img src='img/review_date.png'> {Next_Review_Date1}
                        <img src='img/review_type.png'> {Review_Type}
                      </p>`
-                     ,function lease(feature) {
-                       if ( feature.graphic.attributes.Lease_Expiry == null){
-                         return "Null"
-                       } else if (feature.graphic.attributes.Lease_Expiry != null){
-                         return "{Lease_Expiry}"
-                       }}‍‍‍‍‍‍‍‍‍‍‍‍};  
+                     };  
 
                  
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
