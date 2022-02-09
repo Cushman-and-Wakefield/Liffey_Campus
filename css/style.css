@@ -355,6 +355,7 @@ html, body {
 .image img{
   width:80%;
   height:90%;
+  margin-left: 10%;
 }
 
 /* Switch */
@@ -364,7 +365,7 @@ html, body {
   position:absolute;
   bottom:10px;
   z-index:99;
-  left:50px;
+  left:40%;
 }
 .switch > ul{
   list-style:none;
