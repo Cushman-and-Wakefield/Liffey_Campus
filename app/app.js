@@ -205,7 +205,7 @@ define([
                     this.settings.layer1.popupTemplate = {
                        content: `<h6> Part of Building {Building_No_} </h6>
                        <p class='info'>
-                       <img src="img/tenant.png" title="Tenant Info"> {Tenant} <p class='img__description'>Tenant Name</p>
+                       <img src="img/tenant.png" title="Tenant Info"> {Tenant} 
                        <img src='img/usage.png'> {Use_}
                        <img src="img/area.png"> {sq_m} sqm
                        <img src='img/floor.png'> {Floor}
