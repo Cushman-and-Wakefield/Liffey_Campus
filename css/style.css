@@ -403,6 +403,21 @@ html, body {
   font-size: 0.9vw;
   line-height: 1vw;
   display: inline-block;
+  height: 100px;
+  width: 100%;
+}
+
+#leftie {
+  float: left;
+   width: 45%;
+   display: block;
+   height:inherit;
+}
+
+#leftie {
+  float: right;
+   width: 45%;
+   height:inherit;
 }
 
 .info img {
