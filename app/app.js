@@ -200,12 +200,7 @@ define([
                     //var infoWidget = new InfoWidget(this.view, state);
                  
                   
-                    function lease(feature) {
-                       if ( feature.graphic.attributes.Lease_Expiry == null){
-                         return "Null"
-                       } else if (feature.graphic.attributes.Lease_Expiry != null){
-                         return "{Lease_Expiry}"
-                       }}‍‍‍‍‍‍‍‍‍‍‍‍
+                    
                     
                     this.settings.layer1.popupTemplate = {
                        content: `<h6> Part of Building {Building_No_} </h6>
@@ -218,7 +213,12 @@ define([
                        <img src='img/review_date.png'> {Next_Review_Date1}
                        <img src='img/review_type.png'> {Review_Type}
                      </p>`
-                     };  
+                     ,function lease(feature) {
+                       if ( feature.graphic.attributes.Lease_Expiry == null){
+                         return "Null"
+                       } else if (feature.graphic.attributes.Lease_Expiry != null){
+                         return "{Lease_Expiry}"
+                       }}‍‍‍‍‍‍‍‍‍‍‍‍};  
 
                  
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
