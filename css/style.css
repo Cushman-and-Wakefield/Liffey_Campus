@@ -229,8 +229,11 @@ html, body {
 }
 
 p.pictures {
-  height: 100px;
   display: inline-block;
+}
+
+.pictures img {
+  height 100px;
 }
 
 p.info {
