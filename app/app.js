@@ -212,6 +212,10 @@ define([
                        <img src="img/lease_expiry.png" title="Lease Expiry Date"> {Lease_Expiry}
                        <img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1}
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
+                     </p>
+                     
+                     <p class='pictures'>
+                     <img src='img/Building_8.png' title="Building 8">
                      </p>`
                      };  
 
