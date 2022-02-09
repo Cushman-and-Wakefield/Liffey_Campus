@@ -257,11 +257,11 @@ p.info {
 
 .info img:nth-child(6){
   margin-left: 25px;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .info img:nth-child(7){
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .containerSelect {
