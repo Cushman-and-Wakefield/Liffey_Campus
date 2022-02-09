@@ -37,6 +37,7 @@
 
 define([
     "esri/core/declare",
+    "esri/core/Accessor",
     "esri/config",
     "esri/core/watchUtils",
 
@@ -62,7 +63,7 @@ define([
     "c-through/InfoWidget"
 
 ], function (
-    declare, esriConfig, watchUtils,
+    declare, esriConfig, Accessor, watchUtils,
     WebScene, SceneView, SceneLayer, Basemap,
     BasemapToggle, Home,
     dom, on, domCtr, win, domStyle,
@@ -112,7 +113,18 @@ define([
         return declare(null, {
 
             constructor: function () {
+             var State = Accessor.createSubclass({
+        properties: {
+          selectedPeriod: null,
+          selectedBuilding: null,
+          hoveredBuilding: null,
+          filteredBuildings: null,
+          selectedCategory: this.settings.initCategory
+        }
+      });
 
+         // application state object - alerts on select, hover or period change
+         this.state = new State();
             },
 
             init: function (settings) {
@@ -149,6 +161,8 @@ define([
                     qualityProfile: "high"
                     
                 });
+             
+                var state = this.state;
 
                 // environment settings for better visuals (shadows)
                 this.view.environment.lighting.ambientOcclusionEnabled = true;
@@ -197,9 +211,9 @@ define([
                     this.settings.layer2.visible = false;
                  
                     // initialize info widget
-                    //var infoWidget = new InfoWidget(this.view, this.settings);
+                    var infoWidget = new InfoWidget(this.view, state);
                  
-                    // Set a simple string to a popupTemplate's content
+                    /*// Set a simple string to a popupTemplate's content
                    // The string references a value from the POP_2015 attribute field
                    this.settings.layer1.popupTemplate = {
                      content: "{this.settings.buildingname} people live in this census tract"
@@ -209,7 +223,7 @@ define([
                       // Autocasts as new ImageMediaInfoValue()
                       //value: {
                       //  sourceURL: "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
-                      //}
+                      //}*/
                    };
 
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
