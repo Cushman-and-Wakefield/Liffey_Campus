@@ -214,9 +214,20 @@ define([
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>
                      
-                     <p class='pictures'>
+                     <div class='pictures'>
                      <img src='img/Building_8.PNG' title="Building 8">
-                     </p>`
+                     </div>
+                     <div class='pictures'>
+                     <img src='img/Building_8_Excyte.PNG' title="Building 8 - Exyte">
+                     </div>
+                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                     <!-- The dots/circles -->
+                     <div style="text-align:center">
+                       <span class="dot" onclick="currentSlide(1)"></span>
+                       <span class="dot" onclick="currentSlide(2)"></span>
+                     </div>
+                     `
                      };  
 
                  
