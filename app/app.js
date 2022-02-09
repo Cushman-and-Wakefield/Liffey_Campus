@@ -195,12 +195,7 @@ define([
 
                     this.settings.layer1.visible = true;
                     this.settings.layer2.visible = false;
-                 
-                    // initialize info widget
-                    //var infoWidget = new InfoWidget(this.view, state);
-                 
-                  
-                    
+
                     
                     this.settings.layer1.popupTemplate = {
                      title:  "<h6> Part of Building {Building_No_} </h6>",
@@ -214,29 +209,29 @@ define([
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>
                      
-                     <!-- Slider -->
-                 <div id="slider">
-                   <div class="slides">
-                     <div class="slider">
-                       <div class="image">
-                         <img src="img/Building_8.PNG">
+                         <!-- Slider -->
+                     <div id="slider">
+                       <div class="slides">
+                         <div class="slider">
+                           <div class="image">
+                             <img src="img/Building_8.PNG">
+                           </div>
+                         </div>
+                         <div class="slider">
+                           <div class="image">
+                             <img src="img/Building_8_Excyte.PNG">
+                           </div>
+                         </div>
+                        </div>
+                         <div class="switch">
+                         <ul>
+                           <li>
+                             <div class="on"></div>
+                           </li>
+                           <li></li>
+                         </ul>
                        </div>
                      </div>
-                     <div class="slider">
-                       <div class="image">
-                         <img src="img/Building_8_Excyte.PNG">
-                       </div>
-                     </div>
-                    </div>
-                     <div class="switch">
-                     <ul>
-                       <li>
-                         <div class="on"></div>
-                       </li>
-                       <li></li>
-                     </ul>
-                   </div>
-                 </div>
                      `
                      };  
                  
