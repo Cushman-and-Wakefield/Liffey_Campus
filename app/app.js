@@ -197,7 +197,7 @@ define([
                     this.settings.layer2.visible = false;
                  
                     // initialize info widget
-                    var infoWidget = new InfoWidget(this.view, this.state);
+                    var infoWidget = new InfoWidget(this.view, this.settings);
                  
                    /* // Set a simple string to a popupTemplate's content
                    // The string references a value from the POP_2015 attribute field
