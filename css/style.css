@@ -242,7 +242,7 @@ p.info {
 }
 
 .info img:nth-child(3){
-  margin-left: 50px;
+  margin-left: 25px;
 }
 
 .info img:nth-child(4){
@@ -255,12 +255,12 @@ p.info {
 }
 
 .info img:nth-child(6){
-  margin-left: 50px;
+  margin-left: 25px;
   margin-top: 25px;
 }
 
 .info img:nth-child(7){
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 .containerSelect {
