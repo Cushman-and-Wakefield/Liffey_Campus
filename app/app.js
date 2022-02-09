@@ -246,7 +246,7 @@ define([
                        <span class="dot" onclick="currentSlide(3)"></span> 
                      </div>
                      
-                     <script>
+                     <script type="text/javascript">
                      var slideIndex = 1;
                      showSlides(slideIndex);
 
