@@ -213,23 +213,6 @@ define([
                        <img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1}
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>
-                     <!-- Slideshow container -->
-                     <div class="slideshow-container">
-                     <div class='mySlides fade'>
-                     <img src='img/Building_8.PNG' title="Building 8" style="width:50%">
-                     </div>
-                     <div class='mySlides fade'>
-                     <img src='img/Building_8_Excyte.PNG' title="Building 8 - Exyte" style="width:50%">
-                     </div>
-                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                     </div>
-                     <br>
-                     <!-- The dots/circles -->
-                     <div style="text-align:center">
-                       <span class="dot" onclick="currentSlide(1)"></span>
-                       <span class="dot" onclick="currentSlide(2)"></span>
-                     </div>
                      <script>
                      var slideIndex = 1;
                      showSlides(slideIndex);
@@ -260,7 +243,23 @@ define([
                        dots[slideIndex-1].className += " active";
                      }
                      </script>
-                     
+                     <!-- Slideshow container -->
+                     <div class="slideshow-container">
+                     <div class='mySlides fade'>
+                     <img src='img/Building_8.PNG' title="Building 8" style="width:50%">
+                     </div>
+                     <div class='mySlides fade'>
+                     <img src='img/Building_8_Excyte.PNG' title="Building 8 - Exyte" style="width:50%">
+                     </div>
+                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                     </div>
+                     <br>
+                     <!-- The dots/circles -->
+                     <div style="text-align:center">
+                       <span class="dot" onclick="currentSlide(1)"></span>
+                       <span class="dot" onclick="currentSlide(2)"></span>
+                     </div>                     
                      `
                      };  
                  
