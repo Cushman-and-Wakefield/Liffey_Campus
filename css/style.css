@@ -403,18 +403,20 @@ html, body {
   font-size: 0.9vw;
   line-height: 1vw;
   display: inline-block;
-  height: 100px;
+  height: 120px;
   width: 100%;
 }
 
 #leftie {
   float: left;
    width: 45%;
+   margin-bottom: 10%;
 }
 
 #rightie {
   float: right;
    width: 45%;
+   margin-bottom: 10%;
 }
 
 .info img {
