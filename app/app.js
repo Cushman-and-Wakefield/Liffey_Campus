@@ -219,9 +219,9 @@ define([
                      <span id="slide-2"></span>
                      <span id="slide-3"></span>
                      <div class="image-container">
-                       <img src="img/Building_8.PNG" class="slide" width="100%" height="200px" />
-                       <img src="img/Building_8_Excyte.PNG" class="slide" width="100%" height="200px" />
-                       <img src="img/Building_8_Excyte.PNG" class="slide" width="100%" height="200px" />
+                       <img src="img/Building_8.PNG" class="slide" height="200px" />
+                       <img src="img/Building_8_Excyte.PNG" class="slide" height="200px" />
+                       <img src="img/Building_8_Excyte.PNG" class="slide" height="200px" />
                      </div>
                      <div class="buttons">
                        <a href="#slide-1"></a>
