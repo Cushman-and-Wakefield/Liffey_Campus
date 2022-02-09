@@ -26,14 +26,13 @@ define([
 
   return declare(null, {
 
-    constructor: function(params) {
+    constructor: function(view) {
 
-      this.settings = params.settings;
-      this.view = params.view;
+       this.view = view;
 
       this.view.popup.watch("visible", function(newValue) {
         if (!newValue) {
-          this.settings.buildingIDname = null;
+          state.selectedBuilding = null;
         }
       });
     },
