@@ -37,7 +37,6 @@
 
 define([
     "esri/core/declare",
-    "esri/core/Accessor",
     "esri/config",
     "esri/core/watchUtils",
 
@@ -48,6 +47,7 @@ define([
 
     "esri/widgets/BasemapToggle",
     "esri/widgets/Home",
+    "esri/widgets/Popup",
 
     "dojo/dom",
     "dojo/on",
@@ -63,9 +63,9 @@ define([
     "c-through/InfoWidget"
 
 ], function (
-    declare, esriConfig, Accessor, watchUtils,
+    declare, esriConfig, watchUtils,
     WebScene, SceneView, SceneLayer, Basemap,
-    BasemapToggle, Home,
+    BasemapToggle, Home, Popup,
     dom, on, domCtr, win, domStyle,
     Search,
     ToolsMenu, Welcome, queryTools, InfoWidget) {
@@ -113,15 +113,7 @@ define([
         return declare(null, {
 
             constructor: function () {
-             var State = Accessor.createSubclass({
-        properties: {
-          selectedBuilding: null,
-          hoveredBuilding: null
-        }
-      });
 
-         // application state object - alerts on select, hover or period change
-         this.state = new State();
             },
 
             init: function (settings) {
@@ -159,8 +151,6 @@ define([
                     
                 });
              
-                var state = this.state;
-
                 // environment settings for better visuals (shadows)
                 this.view.environment.lighting.ambientOcclusionEnabled = true;
                 this.view.environment.lighting.directShadowsEnabled = true;
@@ -208,21 +198,11 @@ define([
                     this.settings.layer2.visible = false;
                  
                     // initialize info widget
-                    var infoWidget = new InfoWidget(this.view, state);
+                    //var infoWidget = new InfoWidget(this.view, state);
                  
-                    /*// Set a simple string to a popupTemplate's content
-                   // The string references a value from the POP_2015 attribute field
-                   this.settings.layer1.popupTemplate = {
-                     content: "{this.settings.buildingname} people live in this census tract"
-                     //title: "<b>Part of {this.settings.buildingname} and rented by {this.settings.tenancyname}</b>",
-                      //type: "image", // Autocasts as new ImageMediaInfo()
-                      //caption: "tree species",
-                      // Autocasts as new ImageMediaInfoValue()
-                      //value: {
-                      //  sourceURL: "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
-                      //}*/
-                   //};
-
+                    this.view.popup.title = "Population by zip codes in Southern California";   
+                 
+                 
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
 
