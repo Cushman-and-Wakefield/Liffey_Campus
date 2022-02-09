@@ -199,11 +199,11 @@ define([
                     // initialize info widget
                     //var infoWidget = new InfoWidget(this.view, state);
                  
-                    if ({Lease_Expiry} === null) {
+                    if (this.settings.exactexpirydatename === null) {
                          var lease = "Null";
                     }
                     else {
-                         var lease = {Lease_Expiry}
+                         var lease = this.settings.exactexpirydatename
                          }
                  
                     this.settings.layer1.popupTemplate = {
