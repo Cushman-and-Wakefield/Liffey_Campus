@@ -215,10 +215,10 @@ define([
                      </p>
                      
                      <div class='mySlides fade'>
-                     <img src='img/Building_8.PNG' title="Building 8">
+                     <img src='img/Building_8.PNG' title="Building 8" style="width:50%">
                      </div>
                      <div class='mySlides fade'>
-                     <img src='img/Building_8_Excyte.PNG' title="Building 8 - Exyte">
+                     <img src='img/Building_8_Excyte.PNG' title="Building 8 - Exyte" style="width:50%">
                      </div>
                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
