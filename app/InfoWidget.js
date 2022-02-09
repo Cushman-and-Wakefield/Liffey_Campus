@@ -33,7 +33,7 @@ define([
 
       view.popup.watch("visible", function(newValue) {
         if (!newValue) {
-          this.state.selectedBuilding = null;
+          this.settings.buildingIDname = null;
         }
       });
     },
@@ -43,11 +43,11 @@ define([
       var view = this.view;
 
       // set the building name, height and construction year from the building attributes
-      var name = (attributes.name === " ") ? "Building" : attributes.name;
+      var name = (attributes.buildingname === " ") ? "Building" : attributes.buildingname;
       view.popup.open({content: `<h3> ${name} </h3>
         <p class='info'>
-          <img src="https://raw.githubusercontent.com/Esri/Manhattan-skyscraper-explorer/master/img/height.png"> ${Math.round(attributes.heightroof)} feet
-          <img src='https://raw.githubusercontent.com/Esri/Manhattan-skyscraper-explorer/master/img/construction.png'> ${attributes.cnstrct_yr}
+          /*<img src="https://raw.githubusercontent.com/Esri/Manhattan-skyscraper-explorer/master/img/height.png">*/ ${attributes.tenancyname}
+          /*<img src='https://raw.githubusercontent.com/Esri/Manhattan-skyscraper-explorer/master/img/construction.png'>*/ ${attributes.usagename}
         </p>`});
 
 
