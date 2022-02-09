@@ -205,7 +205,15 @@ define([
                     else {
                          var lease = this.settings.exactexpirydatename;
                          }
-                    console.info({Lease_Expiry});
+                  
+                    function lease(feature) {
+                       if ( feature.graphic.attributes.Lease_Expiry == null){
+                         return "Null"
+                       } else if (feature.graphic.attributes.Lease_Expiry != null){
+                         return "{Lease_Expiry}"
+                       }
+                     }‍‍‍‍‍‍‍‍‍‍‍‍
+                    
                     this.settings.layer1.popupTemplate = {
                        content: `<h6> Part of Building {Building_No_} </h6>
                        <p class='info'>
@@ -213,7 +221,7 @@ define([
                        <img src='img/usage.png'> {Use_}
                        <img src="img/area.png"> {sq_m} sqm
                        <img src='img/floor.png'> {Floor}
-                       <img src="img/lease_expiry.png"> {Lease_Expiry}
+                       <img src="img/lease_expiry.png"> lease()
                        <img src='img/review_date.png'> {Next_Review_Date1}
                        <img src='img/review_type.png'> {Review_Type}
                      </p>`
