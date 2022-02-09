@@ -203,9 +203,9 @@ define([
                          var lease = "Null";
                     }
                     else {
-                         var lease = this.settings.exactexpirydatename
+                         var lease = this.settings.exactexpirydatename;
                          }
-                 
+                    console.info(this.settings.exactexpirydatename);
                     this.settings.layer1.popupTemplate = {
                        content: `<h6> Part of Building {Building_No_} </h6>
                        <p class='info'>
