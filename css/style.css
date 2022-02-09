@@ -236,6 +236,8 @@ p.info {
   display: inline
   vertical-align: text-bottom;
   height: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 
