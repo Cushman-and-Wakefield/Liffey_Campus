@@ -233,6 +233,7 @@ p.info {
 }
 
 .info img {
+  display: inline
   vertical-align: text-bottom;
   height: 15px;
 }
@@ -256,7 +257,7 @@ p.info {
 
 .info img:nth-child(6){
   margin-left: 25px;
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .info img:nth-child(7){
