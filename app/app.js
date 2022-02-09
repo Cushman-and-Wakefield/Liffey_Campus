@@ -224,7 +224,7 @@ define([
                       //value: {
                       //  sourceURL: "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
                       //}*/
-                   };
+                   //};
 
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
