@@ -199,7 +199,7 @@ define([
                     // initialize info widget
                     //var infoWidget = new InfoWidget(this.view, state);
                  
-                    if (this.settings.exactexpirydatename === null) {
+                    if (this.settings.exactexpirydatename == null) {
                          var lease = "Null";
                     }
                     else {
