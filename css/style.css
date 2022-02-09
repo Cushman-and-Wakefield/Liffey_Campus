@@ -319,18 +319,7 @@ html, body {
   46%{
     margin-left:-100%;
   }
-  50%{
-    margin-left:-200%;
-  }
-  71%{
-    margin-left:-200%;
-  }
-  75%{
-    margin-left:-300%;
-  }
-  96%{
-    margin-left:-300%;
-  }
+
 }
 @-moz-keyframes slide{
   0%,100%{
@@ -345,18 +334,7 @@ html, body {
   46%{
     margin-left:-100%;
   }
-  50%{
-    margin-left:-200%;
-  }
-  71%{
-    margin-left:-200%;
-  }
-  75%{
-    margin-left:-300%;
-  }
-  96%{
-    margin-left:-300%;
-  }
+
 }
 @keyframes slide{
   0%,100%{
@@ -370,18 +348,6 @@ html, body {
   }
   46%{
     margin-left:-100%;
-  }
-  50%{
-    margin-left:-200%;
-  }
-  71%{
-    margin-left:-200%;
-  }
-  75%{
-    margin-left:-300%;
-  }
-  96%{
-    margin-left:-300%;
   }
 }
 
@@ -398,18 +364,6 @@ html, body {
   46%{
     margin-left:15px;
   }
-  50%{
-    margin-left:30px;
-  }
-  71%{
-    margin-left:30px;
-  }
-  75%{
-    margin-left:45px;
-  }
-  96%{
-    margin-left:45px;
-  }
 }
 
 @-moz-keyframes on{
@@ -425,18 +379,6 @@ html, body {
   46%{
     margin-left:15px;
   }
-  50%{
-    margin-left:30px;
-  }
-  71%{
-    margin-left:30px;
-  }
-  75%{
-    margin-left:45px;
-  }
-  96%{
-    margin-left:45px;
-  }
 }
 
 @keyframes on{
@@ -451,18 +393,6 @@ html, body {
   }
   46%{
     margin-left:15px;
-  }
-  50%{
-    margin-left:30px;
-  }
-  71%{
-    margin-left:30px;
-  }
-  75%{
-    margin-left:45px;
-  }
-  96%{
-    margin-left:45px;
   }
 }
 
