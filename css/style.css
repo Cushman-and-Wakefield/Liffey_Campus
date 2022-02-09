@@ -230,13 +230,13 @@ html, body {
 
 p.info {
   font-size: 0.9vw;
+  line-height: 1vw;
+  display: inline-block;
 }
 
 .info img {
-  display: inline-block;
   vertical-align: text-bottom;
   height: 20px;
-  line-height: 0.9vw;
 }
 
 .info img:nth-child(2){
