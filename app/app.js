@@ -199,12 +199,6 @@ define([
                     // initialize info widget
                     //var infoWidget = new InfoWidget(this.view, state);
                  
-                    if (this.settings.exactexpirydatename == null) {
-                         var lease = "Null";
-                    }
-                    else {
-                         var lease = this.settings.exactexpirydatename;
-                         }
                   
                     function lease(feature) {
                        if ( feature.graphic.attributes.Lease_Expiry == null){
