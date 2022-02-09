@@ -230,10 +230,7 @@ define([
                        <span class="dot" onclick="currentSlide(1)"></span>
                        <span class="dot" onclick="currentSlide(2)"></span>
                      </div>
-                     
-                     `
-                     };  
-                 
+                     <script>
                      var slideIndex = 1;
                      showSlides(slideIndex);
 
@@ -259,9 +256,15 @@ define([
                        for (i = 0; i < dots.length; i++) {
                            dots[i].className = dots[i].className.replace(" active", "");
                        }
-                       //slides[slideIndex-1].style.display = "block";
+                       slides[slideIndex-1].style.display = "block";
                        dots[slideIndex-1].className += " active";
                      }
+                     </script>
+                     
+                     `
+                     };  
+                 
+                     
 
                  
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
