@@ -233,9 +233,10 @@ p.info {
 }
 
 .info img {
-  display: inline;
+  display: inline-block;
   vertical-align: text-bottom;
-  height: 15px;
+  height: 20px;
+  line-height: 0.9vw;
 }
 
 .info img:nth-child(2){
