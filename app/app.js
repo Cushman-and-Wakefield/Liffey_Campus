@@ -199,7 +199,7 @@ define([
                     // initialize info widget
                     //var infoWidget = new InfoWidget(this.view, state);
                  
-                    layer1.popupTemplate = {
+                    this.settings.layer1.popupTemplate = {
                        content: "{Building_No_} people live in this census tract"
                      };  
 
