@@ -317,7 +317,7 @@ html, body {
 } */
 
  .slider {
-        width: 50%;
+        width: 90%;
         height: 200px;
         background-color: yellow;
         margin-left: auto;
@@ -327,7 +327,7 @@ html, body {
         overflow: hidden;
       }
       .image-container {
-        width: 50%;
+        width: 100%;
         background-color: pink;
         height: 200px;
         clear: both;
@@ -347,10 +347,10 @@ html, body {
         left: 0px;
       }
       #slide-2:target ~ .image-container {
-        left: -500px;
+        left: -200px;
       }
       #slide-3:target ~ .image-container {
-        left: -1000px;
+        left: -400px;
       }
       .buttons {
         position: relative;
