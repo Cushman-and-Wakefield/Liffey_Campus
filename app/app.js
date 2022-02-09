@@ -199,8 +199,10 @@ define([
                     // initialize info widget
                     //var infoWidget = new InfoWidget(this.view, state);
                  
-                    popupTemplate.title = "Marriage in NY, Zip Code: {ZIP}",  
-                 
+                    layer1.popupTemplate = {
+                       content: "{Building_No_} people live in this census tract"
+                     };  
+
                  
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
