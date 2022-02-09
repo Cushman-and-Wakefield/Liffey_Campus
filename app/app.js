@@ -215,7 +215,7 @@ define([
                      </p>
                      
                      <p class='pictures'>
-                     <img src='img/Building_8.png' title="Building 8">
+                     <img src='img/Building_8.PNG' title="Building 8">
                      </p>`
                      };  
 
