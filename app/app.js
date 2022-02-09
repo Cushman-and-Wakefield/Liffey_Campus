@@ -197,19 +197,20 @@ define([
                     this.settings.layer2.visible = false;
                  
                     // initialize info widget
-                    var infoWidget = new InfoWidget(this.view, this.settings);
+                    //var infoWidget = new InfoWidget(this.view, this.settings);
                  
-                   /* // Set a simple string to a popupTemplate's content
+                    // Set a simple string to a popupTemplate's content
                    // The string references a value from the POP_2015 attribute field
                    this.settings.layer1.popupTemplate = {
-                     title: "<b>Part of {this.settings.buildingname} and rented by {this.settings.tenancyname}</b>",
-                      type: "image", // Autocasts as new ImageMediaInfo()
-                      caption: "tree species",
+                     content: "{this.settings.buildingname} people live in this census tract"
+                     //title: "<b>Part of {this.settings.buildingname} and rented by {this.settings.tenancyname}</b>",
+                      //type: "image", // Autocasts as new ImageMediaInfo()
+                      //caption: "tree species",
                       // Autocasts as new ImageMediaInfoValue()
-                      value: {
-                        sourceURL: "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
-                      }
-                   };*/
+                      //value: {
+                      //  sourceURL: "https://www.sunset.com/wp-content/uploads/96006df453533f4c982212b8cc7882f5-800x0-c-default.jpg"
+                      //}
+                   };
 
                     // retrieve distinct values of usage attribute from feature service to create UI (filter dropdowns)
                     queryTools.distinctValues(this.settings.layer1, this.settings.usagename, this.settings.OIDname, function (distinctValues) {
