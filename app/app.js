@@ -213,7 +213,8 @@ define([
                        <img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1}
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>
-                     
+                     <!-- Slideshow container -->
+                     <div class="slideshow-container">
                      <div class='mySlides fade'>
                      <img src='img/Building_8.PNG' title="Building 8" style="width:50%">
                      </div>
@@ -226,6 +227,7 @@ define([
                      <div style="text-align:center">
                        <span class="dot" onclick="currentSlide(1)"></span>
                        <span class="dot" onclick="currentSlide(2)"></span>
+                     </div>
                      </div>
                      `
                      };  
