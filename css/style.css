@@ -228,12 +228,12 @@ html, body {
   width: 30%;
 }
 
-p.pictures {
-  display: inline-block;
-}
-
 .pictures img {
-  height: 100px;
+  display: block;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 p.info {
