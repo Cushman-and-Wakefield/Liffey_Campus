@@ -199,7 +199,7 @@ define([
                     
                     this.settings.layer1.popupTemplate = {
                      title:  "<h6> Part of Building {Building_No_} </h6>",
-                     content: `<p class='info space-around'>
+                     content: `<p class='info'>
                        <div><img src="img/tenant.png" title="Tenant Info"> {Tenant} </div>
                        <div><img src='img/usage.png' title="Usage"> {Use_} </div>
                        <div><img src="img/area.png" title="Area"> {sq_m} sqm </div>
