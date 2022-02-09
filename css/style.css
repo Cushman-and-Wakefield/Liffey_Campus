@@ -402,7 +402,7 @@ html, body {
 p.info {
   font-size: 0.9vw;
   line-height: 1vw;
-  display: flex;
+  display: inline-block;
 }
 
 .info.space-around {
