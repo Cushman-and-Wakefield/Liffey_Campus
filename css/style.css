@@ -267,7 +267,7 @@ html, body {
 .image img{
   width:auto;
   height:90%;
-  vertial-alignment: center;
+  margin-left: 0 auto;
 }
 
 /* Switch */
