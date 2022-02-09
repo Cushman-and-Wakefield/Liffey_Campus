@@ -214,21 +214,19 @@ define([
                        <img src='img/review_type.png' title="Review Type"> {Review_Type}
                      </p>
                      
+                     <!-- Slider -->
+                 <div id="slider">
+                   <div class="slides">
                      <div class="slider">
-                     <span id="slide-1"></span>
-                     <span id="slide-2"></span>
-                     <span id="slide-3"></span>
-                     <div class="image-container">
-                       <img src="img/Building_8.PNG" class="slide" height="200px" />
-                       <img src="img/Building_8_Excyte.PNG" class="slide" height="200px" />
-                       <img src="img/Building_8_Excyte.PNG" class="slide" height="200px" />
+                       <div class="image">
+                         <img src="img/Building_8.PNG">
+                       </div>
                      </div>
-                     <div class="buttons">
-                       <a href="#slide-1"></a>
-                       <a href="#slide-2"></a>
-                       <a href="#slide-3"></a>
+                     <div class="slider">
+                       <div class="image">
+                         <img src="img/Building_8_Excyte.PNG">
+                       </div>
                      </div>
-                   </div>
                      `
                      };  
                  
