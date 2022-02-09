@@ -233,7 +233,6 @@ p.info {
 }
 
 .info img {
-  display: inline;
   vertical-align: text-bottom;
   height: 15px;
   margin-top: 10px;
@@ -250,9 +249,6 @@ p.info {
   color: #fff;
   visibility: hidden;
   opacity: 0;
-
-  /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
 }
 
 .img__wrap:hover .img__description {
