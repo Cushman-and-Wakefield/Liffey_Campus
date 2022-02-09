@@ -410,14 +410,11 @@ html, body {
 #leftie {
   float: left;
    width: 45%;
-   display: block;
-   height:inherit;
 }
 
-#leftie {
+#rightie {
   float: right;
    width: 45%;
-   height:inherit;
 }
 
 .info img {
