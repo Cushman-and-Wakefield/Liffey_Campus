@@ -405,7 +405,7 @@ p.info {
   display: flex;
 }
 
-.container.space-around {
+.info.space-around {
   justify-content: space-around;
 }
 
