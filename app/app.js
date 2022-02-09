@@ -200,10 +200,15 @@ define([
                     //var infoWidget = new InfoWidget(this.view, state);
                  
                     this.settings.layer1.popupTemplate = {
-                       content: `<h5> Part of Building {Building_No_} and rented by {Tenant} </h5>
+                       content: `<h6> Part of Building {Building_No_} </h6>
                        <p class='info'>
+                       <img src="img/tenant.png"> {Tenant} 
+                       <img src='img/usage.png'> {Use_}
                        <img src="img/area.png"> {sq_m} sqm
                        <img src='img/floor.png'> {Floor}
+                       <img src="img/lease_expiry.png"> {Lease_Expiry}
+                       <img src='img/review_date.png'> {Next_Review_Date1}
+                       <img src='img/review_type.png'> {Review_Type}
                      </p>`
                      };  
 
