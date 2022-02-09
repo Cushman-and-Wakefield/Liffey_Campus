@@ -246,9 +246,11 @@ define([
                      <!-- Slideshow container -->
                      <div class="slideshow-container">
                      <div class='mySlides fade'>
+                     <div class="numbertext">1 / 2</div>
                      <img src='img/Building_8.PNG' title="Building 8" style="width:50%">
                      </div>
                      <div class='mySlides fade'>
+                     <div class="numbertext">2 / 2</div>
                      <img src='img/Building_8_Excyte.PNG' title="Building 8 - Exyte" style="width:50%">
                      </div>
                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
