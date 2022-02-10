@@ -411,7 +411,6 @@ html, body {
 
 .info {
   margin-top: 5%;
-  padding-top: 3%;
   font-size: 10pt;
   line-height: 1vw;
   display: inline-block;
@@ -422,14 +421,14 @@ html, body {
 
 #leftie {
   float: left;
-   width: 45%;
-   margin-top: 5%;
+   width: 48%;
+   margin-top: 6%;
 }
 
 #rightie {
   float: right;
-   width: 45%;
-   margin-top: 5%;
+   width: 48%;
+   margin-top: 6%;
 }
 
 .info img {
