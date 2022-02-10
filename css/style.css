@@ -444,16 +444,16 @@ html, body {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-family: sans-serif;
-    min-width: 90%;
+    min-width: 80%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
 }
 
 .styled-table th,
 .styled-table td {
-    padding: 12px 15px;
+    padding: 8px 12px;
 }
 
 .styled-table thead tr {
