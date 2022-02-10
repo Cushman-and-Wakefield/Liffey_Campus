@@ -41,13 +41,9 @@ html, body {
     width: 100%;
   }
 
-.esri-view-height-less-than-medium .esri-popup__main-container {
-    height: 30%;
+.esri-popup__main-container.esri-widget {
     width: auto;
-}
-.esri-view-width-medium .esri-popup__main-container {
-    width: auto;
-    height: 30%
+    height: 50%
 }‍‍‍‍‍‍
 
 .button{ 
