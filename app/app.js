@@ -194,16 +194,7 @@ define([
                     
                     this.settings.layer1.popupTemplate = {
                      title:  "<h6> Part of Building {Building_No_} </h6>",
-                     content: `<div class='info'>
-                       <div id="leftie"><img src="img/tenant.png" title="Tenant Info"> {Tenant} </div>
-                       <div id="rightie"><img src='img/usage.png' title="Usage"> {Use_} </div>
-                       <div id="leftie"><img src="img/area.png" title="Area"> {sq_m} sqm </div>
-                       <div id="rightie"><img src='img/floor.png' title="Floor"> {Floor} </div>
-                       <div id="leftie"><img src="img/lease_expiry.png" title="Lease Expiry Date"> {Lease_Expiry} </div>
-                       <div id="rightie"><img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1} </div>
-                       <div id="leftie"><img src='img/review_type.png' title="Review Type"> {Review_Type} </div>
-                     </div>
-                     
+                     content: `
                          <!-- Slider -->
                      <div id="slider">
                        <div class="slides">
@@ -227,6 +218,17 @@ define([
                          </ul>
                        </div>
                      </div>
+                     
+                     <div class='info'>
+                       <div id="leftie"><img src="img/tenant.png" title="Tenant Info"> {Tenant} </div>
+                       <div id="rightie"><img src='img/usage.png' title="Usage"> {Use_} </div>
+                       <div id="leftie"><img src="img/area.png" title="Area"> {sq_m} sqm </div>
+                       <div id="rightie"><img src='img/floor.png' title="Floor"> {Floor} </div>
+                       <div id="leftie"><img src="img/lease_expiry.png" title="Lease Expiry Date"> {Lease_Expiry} </div>
+                       <div id="rightie"><img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1} </div>
+                       <div id="leftie"><img src='img/review_type.png' title="Review Type"> {Review_Type} </div>
+                     </div>
+                     
                      `
                      };  
                  
