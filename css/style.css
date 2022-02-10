@@ -453,9 +453,12 @@ html, body {
 
 .styled-table th,
 .styled-table td {
-    padding: 8px 12px;
+    padding: 6px 9px;
 }
-
+.styled-table th {
+    font-weight: bold;
+    font-size: 0.9vw;
+}
 .styled-table thead tr {
     background-color: #003a49;
     color: #ffffff;
