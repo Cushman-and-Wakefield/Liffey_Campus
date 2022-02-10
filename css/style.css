@@ -405,7 +405,7 @@ html, body {
   font-size: 1vw;
   line-height: 1vw;
   display: inline-block;
-  height: 120px;
+  height: 80px;
   width: 100%;
   border-top: 1px solid black;
 }
@@ -413,13 +413,13 @@ html, body {
 #leftie {
   float: left;
    width: 45%;
-   margin-bottom: 3%;
+   margin-top: 3%;
 }
 
 #rightie {
   float: right;
    width: 45%;
-   margin-bottom: 3%;
+   margin-top: 3%;
 }
 
 .info img {
@@ -442,11 +442,13 @@ html, body {
 
 .styled-table {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1vw;
     font-family: sans-serif;
-    min-width: 100%;
+    min-width: 90%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
 }
 
 .styled-table th,
