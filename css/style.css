@@ -579,6 +579,11 @@ html, body {
   text-transform: uppercase;
   font-size: 0.75vw;
   align-items: center;
+  display:flex;
+}
+
+.labelViz p{
+    vertical-align: middle;
 }
 
 #reset{
