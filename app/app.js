@@ -191,7 +191,16 @@ define([
                     this.settings.layer1.visible = true;
                     this.settings.layer2.visible = false;
 
-                    
+                    this.view.popup = {
+                      dockEnabled: true,
+                      dockOptions: {
+                        // Disables the dock button from the popup
+                        buttonEnabled: false,
+                        // Ignore the default sizes that trigger responsive docking
+                        breakpoint: true
+                      }
+                    };
+                 
                     this.settings.layer1.popupTemplate = {
                      title:  "<h6> Part of Building {Building_No_} </h6>",
                      content: `
