@@ -572,9 +572,8 @@ html, body {
   background: #003a49;
   color: white;
   text-align: center;
-  /*vertical-align: middle;*/
-  margin-top: auto;
-  margin-bottom: auto;
+  vertical-align: middle;
+  line-height: 6.7%;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.75vw;
@@ -582,9 +581,6 @@ html, body {
   display:flex;
 }
 
-.labelViz p{
-    vertical-align: middle;
-}
 
 #reset{
   position: absolute;
@@ -600,10 +596,7 @@ html, body {
   align-items: center;
   border-radius: 8px;
   display:flex;
-}
-
-#reset p{
-    vertical-align: middle;
+  line-height: 10%;
 }
 
 #reset:hover{
