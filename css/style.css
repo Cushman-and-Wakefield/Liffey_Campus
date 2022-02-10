@@ -42,8 +42,8 @@ html, body {
   }
 
 .esri-popup__main-container.esri-widget {
-    width: auto;
-    height: 300px;
+    width: 300px;
+    height: 400px;
 }‍‍‍‍‍‍
 
 .button{ 
