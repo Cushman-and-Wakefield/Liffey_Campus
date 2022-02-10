@@ -235,6 +235,10 @@ define([
                      </thead>
                      <tbody>
                          <tr>
+                             <td>Passing Rent</td>
+                             <td>{Passing_Rent}</td>
+                         </tr>
+                         <tr>
                              <td>Lease Expiry Date</td>
                              <td>{Lease_Expiry}</td>
                          </tr>
@@ -246,6 +250,23 @@ define([
                              <td>Review Type</td>
                              <td>{Review_Type}</td>
                          </tr>
+                          <tr>
+                             <td>Term Commencement Date</td>
+                             <td>{Term_Commencement_Date}</td>
+                         </tr>
+                         <tr>
+                             <td>Option Date</td>
+                             <td>{Option_Date}</td>
+                         </tr>
+                         <tr>
+                             <td>Earliest Potential Available Date</td>
+                             <td>{Earliest_Potential_Available_Da}</td>
+                         </tr>
+                         <tr>
+                             <td>Notice Period</td>
+                             <td>{Notice_Period}</td>
+                         </tr>
+                         
                          <!-- and so on... -->
                      </tbody>
                  </table>
