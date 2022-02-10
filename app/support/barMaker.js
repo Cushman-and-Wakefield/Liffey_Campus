@@ -173,7 +173,7 @@ define([
                     "startDuration": 1,
                     "graphs": [{
                         "balloonText": "[[category]]: <b>[[value]]</b>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "lineAlpha": 0,
                         "fillColorsField": "color",
                         "type": "column",
@@ -241,7 +241,7 @@ define([
                     "startDuration": 1,
                     "graphs": [{
                         "balloonText": "[[category]]: <b>[[value]]</b>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "lineAlpha": 0,
                         "fillColorsField": "color",
                         "type": "column",
@@ -378,7 +378,7 @@ define([
                     "startDuration": 1,
                     "graphs": [{
                         "balloonText": "[[category]]: <b>[[value]]</b>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "lineAlpha": 0,
                         "fillColorsField": "color",
                         "type": "column",
@@ -438,7 +438,7 @@ define([
                     "startDuration": 1,
                     "graphs": [{
                         "balloonText": "[[category]]: <b>[[value]]</b>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "lineAlpha": 0,
                         "fillColorsField": "color",
                         "type": "column",
@@ -604,7 +604,7 @@ define([
                     "startDuration": 1,
                     "graphs": [{
                         "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI",
@@ -614,7 +614,7 @@ define([
                     },
                        {
                         "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "OMRV",
@@ -624,7 +624,7 @@ define([
                     },
                        {
                         "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
@@ -697,7 +697,7 @@ define([
                     "startDuration": 1,
                     "graphs": [{
                         "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI",
@@ -707,7 +707,7 @@ define([
                     },
                        {
                         "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "OMRV",
@@ -717,7 +717,7 @@ define([
                     },
                        {
                         "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-                        "fillAlphas": 0.8,
+                        "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
