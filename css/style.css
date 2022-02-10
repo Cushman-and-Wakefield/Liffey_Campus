@@ -607,45 +607,35 @@ html, body {
 #viz-white {
   left: 3.5%;
   border-radius: 8px;
-  #position: relative; 
-  #top: -50%;
+
 }
 
 #viz-usage {
   left: 28%;
   border-radius: 8px;
-  #position: relative; 
-  #top: -50%;
+
 }
 
 #viz-tenancy {
   left: 52.6%;
   border-radius: 8px;
-  #position: relative; 
-  #top: -50%;
 }
 
 #viz-area {
   left: 77.2%;
   border-radius: 8px;
-  #position: relative; 
-  #top: -50%;
 }
 
 #viz-leaseexpiry {
   left: 3.5%;
   top: 24%;
   border-radius: 8px;
-  #position: relative; 
-  #top: -50%;
 }
 
 #viz-reviewdate {
   left: 28%;
   top: 24%;
   border-radius: 8px;
-  #position: relative; 
-  #top: -50%;
 }
 
 .titleFilter{
