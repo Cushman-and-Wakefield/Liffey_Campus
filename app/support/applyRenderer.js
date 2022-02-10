@@ -158,7 +158,7 @@ define([
                         field: fieldname,
                         stops: [
                             { value: valuemin, color: "#003a49" },
-                            { value: valuemax, color: "#7E99AA" }
+                            { value: valuemax, color: "#75c4e1" }
                         ]
                     }]
 
@@ -220,7 +220,7 @@ define([
                         field: fieldname,
                         stops: [
                             { value: year_min, color: "#003a49" },
-                            { value: year_max, color: "#7E99AA" }
+                            { value: year_max, color: "#75c4e1" }
                         ]
                     }]
 
