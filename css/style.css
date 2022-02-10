@@ -412,7 +412,7 @@ html, body {
 .info {
   margin-top: 5%;
   font-size: 10pt;
-  line-height: 1vw;
+  line-height: 10pt;
   display: inline-block;
   height: 110px;
   width: 100%;
@@ -422,31 +422,15 @@ html, body {
 #leftie {
   float: left;
    width: 48%;
-   padding-top: 6%;
+   padding-top: 3%;
+   height: 45px;
 }
 
 #rightie {
   float: right;
    width: 48%;
-   padding-top: 6%;
-}
-
-.info img {
-  vertical-align: text-bottom;
-  height: 20px;
-}
-
-.info img:nth-child(2){
-  margin-left: 20px;
-}
-
-.info img:nth-child(3){
-  margin-left: 20px;
-}
-
-.info img:nth-child(4){
-  margin-left: 20px;
-  margin-top: 10px;
+   padding-top: 3%;
+   height: 45px;
 }
 
 .styled-table {
