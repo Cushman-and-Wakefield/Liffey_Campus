@@ -401,7 +401,8 @@ html, body {
 
 .info {
   margin-top: 5%;
-  font-size: 0.9vw;
+  padding-top: 3%;
+  font-size: 1vw;
   line-height: 1vw;
   display: inline-block;
   height: 120px;
@@ -442,7 +443,7 @@ html, body {
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
+    font-size: 1vw;
     font-family: sans-serif;
     min-width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
