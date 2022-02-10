@@ -46,6 +46,11 @@ html, body {
     height: 500px;
 }‍‍‍‍‍‍
 
+.dijitDialogTitleBar {
+   background-color: #003a49;
+   color: white;
+}
+
 .button{ 
   font-size: 0.8vw;
   padding: 0%;
