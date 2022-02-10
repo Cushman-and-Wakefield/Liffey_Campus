@@ -402,10 +402,10 @@ html, body {
 .info {
   margin-top: 5%;
   padding-top: 3%;
-  font-size: 1vw;
+  font-size: 0.9vw;
   line-height: 1vw;
   display: inline-block;
-  height: 100px;
+  height: 110px;
   width: 100%;
   border-top: 1px solid black;
 }
