@@ -224,11 +224,31 @@ define([
                        <div id="rightie"><img src='img/usage.png' title="Usage"> {Use_} </div>
                        <div id="leftie"><img src="img/area.png" title="Area"> {sq_m} sqm </div>
                        <div id="rightie"><img src='img/floor.png' title="Floor"> {Floor} </div>
-                       <div id="leftie"><img src="img/lease_expiry.png" title="Lease Expiry Date"> {Lease_Expiry} </div>
-                       <div id="rightie"><img src='img/review_date.png' title="Next Review Date"> {Next_Review_Date1} </div>
-                       <div id="leftie"><img src='img/review_type.png' title="Review Type"> {Review_Type} </div>
                      </div>
                      
+                     <table class="styled-table">
+                     <thead>
+                         <tr>
+                             <th>Variable</th>
+                             <th>Value</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>Lease Expiry Date</td>
+                             <td>{Lease_Expiry}</td>
+                         </tr>
+                         <tr>
+                             <td>Next Review Date</td>
+                             <td>{Next_Review_Date1}</td>
+                         </tr>
+                         <tr>
+                             <td>Review Type</td>
+                             <td>{Review_Type}</td>
+                         </tr>
+                         <!-- and so on... -->
+                     </tbody>
+                 </table>
                      `
                      };  
                  
