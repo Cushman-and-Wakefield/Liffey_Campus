@@ -433,6 +433,11 @@ html, body {
    height: 45px;
 }
 
+.info img {
+  vertical-align: text-bottom;
+  height: 20px;
+}
+
 .styled-table {
     border-collapse: collapse;
     margin-left: auto;
