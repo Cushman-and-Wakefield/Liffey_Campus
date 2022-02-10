@@ -138,7 +138,7 @@ define([
                     portalItem: {
                         id: this.settings.webscene
                     },
-                    basemap: "osm-standard-relief",
+                    basemap: "gray-vector",
                     ground: "world-elevation"
                 });
 
