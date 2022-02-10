@@ -73,7 +73,8 @@ define([
         var settings_demo = {
             name: "Demo",
             url: "https://cwireland.maps.arcgis.com",           // portal URL for config 
-            webscene: "dfdf7ab912d14d9d920db64cc9c7368f",   // portal item ID of the webscene
+            //webscene: "dfdf7ab912d14d9d920db64cc9c7368f",   // portal item ID of the webscene
+            webscene: "7c92b9e7312b4fae83b741d3b3c62cbe",
             usagename: "Use_",                             // usage attribute (string)
             tenancyname: "Tenant",                          // tenant names (string)
             floorname: "Floor1",                           // floor attribute (string)
