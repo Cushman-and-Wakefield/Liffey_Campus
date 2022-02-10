@@ -122,11 +122,11 @@ define([
                 var color = [];
 
                 if (bins_new > 9) {
-                    color = ["#FBE789", "#E2DD8C", "#C9D38F", "#B0CA93", "#97C096", "#7EB699", "#65AD9D", "#4CA3A0", "#3399A3", "#1B90A7"];
+                    color = ["#003a49", "#294f5d", "#486671", "#667d87", "#83959c", "#a2aeb3", "#7E99AA", "#A7ADC9", "#c1c7ca", "#e1e1e1"];
 
                 }
                 else {
-                    color = ["#FBE789", "#CED58F", "#A1C495", "#74B29B", "#47A1A1", "#1B90A7"];
+                    color = ["#003a49", "#294f5d", "#486671", "#83959c", "#c1c7ca", "#e1e1e1"];
                 }
 
 
@@ -332,11 +332,11 @@ define([
                 var color = [];
 
                 if (bins_new > 9) {
-                    color = ["#FBE789", "#E2DD8C", "#C9D38F", "#B0CA93", "#97C096", "#7EB699", "#65AD9D", "#4CA3A0", "#3399A3", "#1B90A7"];
+                    color = ["#003a49", "#294f5d", "#486671", "#667d87", "#83959c", "#a2aeb3", "#7E99AA", "#A7ADC9", "#c1c7ca", "#e1e1e1"];
 
                 }
                 else {
-                    color = ["#FBE789", "#CED58F", "#A1C495", "#74B29B", "#47A1A1", "#1B90A7"];
+                    color = ["#003a49", "#294f5d", "#486671", "#83959c", "#c1c7ca", "#e1e1e1"];
                 }
              
                 for (var i = 0; i < unique_years.length; i++) {
@@ -539,11 +539,11 @@ define([
                 var color = [];
 
                 if (bins_new > 9) {
-                    color = ["#FBE789", "#E2DD8C", "#C9D38F", "#B0CA93", "#97C096", "#7EB699", "#65AD9D", "#4CA3A0", "#3399A3", "#1B90A7"];
+                    color = ["#003a49", "#294f5d", "#486671", "#667d87", "#83959c", "#a2aeb3", "#7E99AA", "#A7ADC9", "#c1c7ca", "#e1e1e1"];
 
                 }
                 else {
-                    color = ["#FBE789", "#CED58F", "#A1C495", "#74B29B", "#47A1A1", "#1B90A7"];
+                    color = ["#003a49", "#294f5d", "#486671", "#83959c", "#c1c7ca", "#e1e1e1"];
                 }
              
                 for (var i = 0; i < unique_years.length; i++) {
@@ -604,7 +604,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI",
-                        "fillColors": "#FBE789",
+                        "fillColors": "#003a49",
                         "type": "column",
                         "valueField": "CPI"
                     },
@@ -614,7 +614,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "OMRV",
-                        "fillColors": "#CED58F",
+                        "fillColors": "#7E99AA",
                         "type": "column",
                         "valueField": "OMRV"
                     },
@@ -624,7 +624,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
-                        "fillColors": "#A1C495",
+                        "fillColors": "#e1e1e1",
                         "type": "column",
                         "valueField": "CPI_Cap_and_Collar"
                     }],
@@ -697,7 +697,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI",
-                        "fillColors": "#FBE789",
+                        "fillColors": "#003a49",
                         "type": "column",
                         "valueField": "CPI"
                     },
@@ -707,7 +707,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "OMRV",
-                        "fillColors": "#CED58F",
+                        "fillColors": "#7E99AA",
                         "type": "column",
                         "valueField": "OMRV"
                     },
@@ -717,7 +717,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
-                        "fillColors": "#A1C495",
+                        "fillColors": "#e1e1e1",
                         "type": "column",
                         "valueField": "CPI_Cap_and_Collar"
                     }],
