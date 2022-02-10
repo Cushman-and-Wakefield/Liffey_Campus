@@ -415,20 +415,21 @@ html, body {
   line-height: 10pt;
   display: inline-block;
   height: 100px;
-  width: 100%;
+  width: 90%;
   border-top: 1px solid black;
+  margin-left:10%;
 }
 
 #leftie {
   float: left;
-   width: 48%;
+   width: 45%;
    padding-top: 3%;
    height: 45px;
 }
 
 #rightie {
   float: right;
-   width: 48%;
+   width: 45%;
    padding-top: 3%;
    height: 45px;
 }
