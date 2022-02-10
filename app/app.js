@@ -88,17 +88,17 @@ define([
             exactexpirydatename: "Lease_Expiry",        // whole lease expiry date for statistics part only (string)
             exactreviewdatename: "Next_Review_Date1",    // whole review date for statistics part only (string)
             color: [                                        // color ramp for unique value renderer
-                    [255, 244, 196, 1],
-                    [246, 233, 182, 1],
-                    [251, 231, 137, 1],                     
-                    [193, 211, 127, 1],
-                    [140, 188, 123, 1],
-                    [93, 163, 121, 1],
-                    [126, 145, 105, 1],
-                    [95, 124, 97, 1],
-                    [52, 137, 117, 1],
-                    [13, 110, 108, 1],
-                    [0, 84, 93, 1],
+                    [141, 216, 243, 1],
+                    [149, 208, 235, 1],
+                    [160, 204, 224, 1],                     
+                    [126, 153, 170, 1],
+                    [117, 196, 225, 1],
+                    [100, 175, 202, 1],
+                    [84, 154, 179, 1],
+                    [68, 134, 156, 1],
+                    [52, 114, 134, 1],
+                    [36, 94, 113, 1],
+                    [19, 76, 93, 1],
                     [0, 58, 73, 1]
                 ]
         };
