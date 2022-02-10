@@ -578,6 +578,7 @@ html, body {
   text-transform: uppercase;
   font-size: 0.75vw;
   align-items: center;
+  justify-content: center;
   display:flex;
 }
 
@@ -596,6 +597,7 @@ html, body {
   align-items: center;
   border-radius: 8px;
   display:flex;
+  justify-content: center;
   line-height: 10%;
 }
 
