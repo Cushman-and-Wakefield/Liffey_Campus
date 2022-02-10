@@ -422,13 +422,13 @@ html, body {
 #leftie {
   float: left;
    width: 48%;
-   margin-top: 6%;
+   padding-top: 6%;
 }
 
 #rightie {
   float: right;
    width: 48%;
-   margin-top: 6%;
+   padding-top: 6%;
 }
 
 .info img {
