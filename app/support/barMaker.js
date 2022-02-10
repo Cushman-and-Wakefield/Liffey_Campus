@@ -123,11 +123,11 @@ define([
 
                 if (bins_new > 9) {
                     //color = ["#003A49", "#00545d", "#0d6e6c", "#348975", "#5F7C61", "#7E9169", "#5da379", "#8cbc7b", "#c1d37f", "#fbe789"];
-                      color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71","#64afca", "#347286", "#7E99AA", "#75c4e1", "#86daf9"];
+                      color = ["#003a49", "#134c5d", "#245e71", "#347286", "#44869c", "#549ab3", "#64afca", "#75c4e1", "#A0CCE0", "#7E99AA"];
 
                      }
                      else {
-                         color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71", "#86daf9"];
+                         color = ["#003a49","#245e71", "#44869c","#64afca", "#75c4e1", "#7E99AA"];
                      }
 
 
@@ -334,12 +334,12 @@ define([
 
                 if (bins_new > 9) {
                     //color = ["#003A49", "#00545d", "#0d6e6c", "#348975", "#5F7C61", "#7E9169", "#5da379", "#8cbc7b", "#c1d37f", "#fbe789"];
-                      color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71","#64afca", "#347286", "#7E99AA", "#75c4e1", "#86daf9"];
+                      color = ["#003a49", "#134c5d", "#245e71", "#347286", "#44869c", "#549ab3", "#64afca", "#75c4e1", "#A0CCE0", "#7E99AA"];
 
-                }
-                else {
-                    color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71", "#86daf9"];
-                }
+                     }
+                     else {
+                         color = ["#003a49","#245e71", "#44869c","#64afca", "#75c4e1", "#7E99AA"];
+                     }
              
                 for (var i = 0; i < unique_years.length; i++) {
                     chartData.push({
@@ -542,12 +542,12 @@ define([
 
                 if (bins_new > 9) {
                     //color = ["#003A49", "#00545d", "#0d6e6c", "#348975", "#5F7C61", "#7E9169", "#5da379", "#8cbc7b", "#c1d37f", "#fbe789"];
-                      color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71","#64afca", "#347286", "#7E99AA", "#75c4e1", "#86daf9"];
+                      color = ["#003a49", "#134c5d", "#245e71", "#347286", "#44869c", "#549ab3", "#64afca", "#75c4e1", "#A0CCE0", "#7E99AA"];
 
-                }
-                else {
-                    color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71", "#86daf9"];
-                }
+                     }
+                     else {
+                         color = ["#003a49","#245e71", "#44869c","#64afca", "#75c4e1", "#7E99AA"];
+                     }
                     //color = ["#003A49", "#00545d", "#0d6e6c", "#8cbc7b", "#c1d37f", "#fbe789"];
                
              
@@ -629,7 +629,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
-                        "fillColors": "#86daf9",
+                        "fillColors": "#7E99AA",
                         "type": "column",
                         "valueField": "CPI_Cap_and_Collar"
                     }],
@@ -722,7 +722,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
-                        "fillColors": "#86daf9",
+                        "fillColors": "#7E99AA",
                         "type": "column",
                         "valueField": "CPI_Cap_and_Collar"
                     }],
