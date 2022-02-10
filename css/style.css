@@ -518,8 +518,8 @@ html, body {
   padding-top: 3%;
   padding-bottom: 0.5%;
   margin-bottom: 1.5%;
-  color: grey;
-  border-bottom: 1px solid #FBE789;
+  color: #003a49;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .containerViz {
@@ -539,8 +539,8 @@ html, body {
   padding: 0;
   width: 19.3%;
   height: 6.7%;
-  background: #FBE789;
-  color: grey;
+  background: #003a49;
+  color: white;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -558,15 +558,15 @@ html, body {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background: grey;
+  background: #003a49;
   color: white;
   font-size: 0.75vw;
   align-items: center;
 }
 
 #reset:hover{
-  background: #FBE789;
-  color: grey
+  background: #e1e1e1;
+  color: #003a49
 }
 
 #viz-white {
@@ -606,7 +606,7 @@ html, body {
   padding-left: 1.4%;
   padding-bottom: 1.4%;
   font-size: 1.35vw;
-  color: grey;
+  color: #003a49;
 }
 
 #titleFilter {
@@ -615,8 +615,8 @@ html, body {
   padding-bottom: 0.5%;
   margin-top: 3.5%;
   margin-bottom: 2%;
-  color: grey;
-  border-bottom: 1px solid #FBE789;
+  color: #003a49;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 #titleAreaMin{
@@ -652,15 +652,15 @@ html, body {
   width: 28%;
   height: 11%;
   border: none;
-  color: grey;
-  border-bottom: 1px solid #FBE789;
+  color: #003a49;
+  border-bottom: 1px solid #e1e1e1;
   font-size: 0.82vw;
 }
 
 .filterDropdown{
   width: 100%;
   border: none;
-  color: grey;
+  color: #003a49;
   font-size: 0.82vw;
 }
 
@@ -670,7 +670,7 @@ html, body {
     padding-left: 0px;
     width: 50%;
     height: 10%;
-    background: #80C9F5;
+    background: #003a49;
 }
 
 #AreaMax{
@@ -706,24 +706,6 @@ html, body {
   top: 35%;
 }
 
-#filter-leaseexpiry {
-  top: 100px;
-  left: 215px;
-  display: none;
-}
-
-#filter-reviewdate {
-  top: 100px;
-  left: 215px;
-  display: none;
-}
-
-#filter-reviewtype {
-  top: 100px;
-  left: 415px;
-  display:none;
-}
-
 #filterAreaMin{
     position: absolute;
     top: 60%;
@@ -731,7 +713,7 @@ html, body {
     height: 25%;  
     left: 2.5%;
     padding-left: 0;
-    color: #FBE789; 
+    color: #003a49; 
 }
 
 .Floorcontainer {
@@ -755,7 +737,7 @@ html, body {
   height: 68.5%;
   width: 95%;
   font-size: 1.35vw;
-  color: grey;
+  color: #003a49;
   z-index: 0;
 }
 
@@ -784,8 +766,8 @@ html, body {
     height: 600%;
     font-size: 0.8vw;
     border: none;
-    color: grey;
-    border-bottom: 1px solid #FBE789; 
+    color: #003a49;
+    border-bottom: 1px solid #e1e1e1; 
 }
 
 #AreaMaxText{
@@ -796,8 +778,8 @@ html, body {
     height: 600%;
     font-size: 0.8vw;
     border: none;
-    color: grey;
-    border-bottom: 1px solid #FBE789;  
+    color: #003a49;
+    border-bottom: 1px solid #e1e1e1;  
 }
 
 #statsDiv {
@@ -811,7 +793,7 @@ html, body {
   height: 65%;
   width: 95%;
   font-size: 1vw;
-  color: grey;
+  color: #003a49;
   z-index: 0;
 }
 
@@ -821,8 +803,8 @@ html, body {
   padding-left: 0.9%;
   padding-bottom: 0.5%;
   margin-bottom: 3%;
-  color: grey;
-  border-bottom: 1px solid #FBE789;
+  color: #003a49;
+  border-bottom: 1px solid #e1e1e1;
   
 }
 
@@ -833,7 +815,7 @@ html, body {
   height: 15%;
   margin-bottom: 2%;
   padding: 0;
-  border: 1px solid #FBE789;
+  border: 1px solid #003a49;
   border-radius: 8px;
   text-align: center;
   line-height: 0.9vw;
@@ -847,7 +829,7 @@ html, body {
   height: 15%;
   margin-bottom: 2%;
   padding: 0;
-  border: 1px solid #FBE789;
+  border: 1px solid #003a49;
   border-radius: 8px;
   text-align: center;
   line-height: 0.9vw;
@@ -858,7 +840,7 @@ html, body {
   height: 15%;
   margin-bottom: 2%;
   padding: 0;
-  border: 1px solid #FBE789;
+  border: 1px solid #003a49;
   border-radius: 8px;
   text-align: center;
   line-height: 0.9vw;
@@ -881,7 +863,7 @@ html, body {
 /* Slider style overrides */
 
 .noUi-connect {
-    background: #888888;
+    background: #003a49;
 }
 .noUi-horizontal {
     height: 5px;
