@@ -588,9 +588,6 @@ html, body {
   top: 85%;
   left: 44%;
   text-align: center;
-  /*vertical-align: middle;*/
-  margin-top: auto;
-  margin-bottom: auto;
   cursor: pointer;
   background: #003a49;
   color: white;
@@ -603,7 +600,7 @@ html, body {
 #reset p{
     text-align:center;
     vertical-align: middle;
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
 }
 
