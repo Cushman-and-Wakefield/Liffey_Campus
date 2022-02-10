@@ -596,6 +596,15 @@ html, body {
   color: white;
   font-size: 0.75vw;
   align-items: center;
+  border-radius: 8px;
+  display:flex;
+}
+
+#reset p{
+    align-self:center;
+    text-align:center;
+    vertical-align: middle;
+    width:100%;
 }
 
 #reset:hover{
