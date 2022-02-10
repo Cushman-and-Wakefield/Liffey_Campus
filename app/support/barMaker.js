@@ -545,10 +545,13 @@ define([
                       color = ["#003a49", "#134c5d", "#245e71", "#347286", "#44869c", "#549ab3", "#64afca", "#A0CCE0", "#7E99AA", "#75c4e1"];
 
                      }
-                     else {
+                     else if (bins_new > 6) {
                          color = ["#003a49","#245e71", "#44869c","#64afca", "#7E99AA", "#75c4e1"];
                      }
                     //color = ["#003A49", "#00545d", "#0d6e6c", "#8cbc7b", "#c1d37f", "#fbe789"];
+                    else {
+                        color = ["#003a49", "#75c4e1"]
+                    }
                
              
                 for (var i = 0; i < unique_years.length; i++) {
