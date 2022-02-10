@@ -197,7 +197,8 @@ define([
                         // Disables the dock button from the popup
                         buttonEnabled: false,
                         // Ignore the default sizes that trigger responsive docking
-                        breakpoint: true
+                        breakpoint: true,
+                        position: "top-right"
                       }
                     };
                  
