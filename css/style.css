@@ -406,6 +406,7 @@ html, body {
   display: inline-block;
   height: 120px;
   width: 100%;
+  border-top: 1px solid black;
 }
 
 #leftie {
