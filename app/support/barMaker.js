@@ -702,7 +702,7 @@ define([
                     "graphs": [{
                         "balloonText": "<b>[[title]]</b><span style='font-size:7px'>[[category]]: <b>[[value]]</b></span>",
                         "fillAlphas": 1,
-                        "labelText": "[[value]]",
+                        "labelText": "<span style='color: white'>[[value]]</span>",
                         "lineAlpha": 0,
                         "title": "CPI",
                         "fillColors": "#003a49",
@@ -712,7 +712,7 @@ define([
                        {
                         "balloonText": "<b>[[title]]</b><span style='font-size:7px'>[[category]]: <b>[[value]]</b></span>",
                         "fillAlphas": 1,
-                        "labelText": "[[value]]",
+                        "labelText": "<span style='color: white'>[[value]]</span>",
                         "lineAlpha": 0,
                         "title": "OMRV",
                         "fillColors": "#44869c",
@@ -722,7 +722,7 @@ define([
                        {
                         "balloonText": "<b>[[title]]</b><span style='font-size:7px'>[[category]]: <b>[[value]]</b></span>",
                         "fillAlphas": 1,
-                        "labelText": "[[value]]",
+                        "labelText": "<span style='color: white'>[[value]]</span>",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
                         "fillColors": "#75c4e1",
