@@ -700,7 +700,7 @@ define([
                     "gridAboveGraphs": true,
                     "startDuration": 1,
                     "graphs": [{
-                        "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                        "balloonText": "<b>[[title]]</b><span style='font-size:7px'>[[category]]: <b>[[value]]</b></span>",
                         "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
@@ -710,7 +710,7 @@ define([
                         "valueField": "CPI"
                     },
                        {
-                        "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                        "balloonText": "<b>[[title]]</b><span style='font-size:7px'>[[category]]: <b>[[value]]</b></span>",
                         "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
@@ -720,7 +720,7 @@ define([
                         "valueField": "OMRV"
                     },
                        {
-                        "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                        "balloonText": "<b>[[title]]</b><span style='font-size:7px'>[[category]]: <b>[[value]]</b></span>",
                         "fillAlphas": 1,
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
