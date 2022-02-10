@@ -44,12 +44,12 @@ define([
                     symbol: new MeshSymbol3D({
                         symbolLayers: [
                             new FillSymbol3DLayer({
-                                material: { color: [251, 231, 137, 1] 
+                                material: { color: "#E5E2C2" 
                                 },
                                 edges: {
                                   type: "solid",
-                                  size: 0.5,
-                                  color: [50, 50, 50, 0.2]
+                                  size: 0.3,
+                                  color: "#003a49"
                                 }
                             })
                         ]
@@ -162,8 +162,8 @@ define([
                         type: "color",
                         field: fieldname,
                         stops: [
-                            { value: valuemin, color: "#FBE789" },
-                            { value: valuemax, color: "#1B90A7" }
+                            { value: valuemin, color: "#003a49" },
+                            { value: valuemax, color: "#e1e1e1" }
                         ]
                     }]
 
@@ -224,8 +224,8 @@ define([
                         type: "color",
                         field: fieldname,
                         stops: [
-                            { value: year_min, color: "#FBE789" },
-                            { value: year_max, color: "#1B90A7" }
+                            { value: year_min, color: "#003a49" },
+                            { value: year_max, color: "#e1e1e1" }
                         ]
                     }]
 
