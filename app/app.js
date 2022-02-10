@@ -200,12 +200,12 @@ define([
                        <div class="slides">
                          <div class="slider">
                            <div class="image">
-                             <img src="img/Building_8.PNG">
+                             <img src="{Image}">
                            </div>
                          </div>
                          <div class="slider">
                            <div class="image">
-                             <img src="img/Building_8_Excyte.PNG">
+                             <img src="{Image1}">
                            </div>
                          </div>
                         </div>
