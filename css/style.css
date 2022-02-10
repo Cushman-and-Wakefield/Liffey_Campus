@@ -400,6 +400,7 @@ html, body {
 }
 
 .info {
+  margin-top: 5%;
   font-size: 0.9vw;
   line-height: 1vw;
   display: inline-block;
