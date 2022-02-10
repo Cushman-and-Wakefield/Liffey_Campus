@@ -249,9 +249,9 @@ define([
                         // for area renderer
                         var initArea = barMaker.createChartData(currentResult, settings, 6);
                         // for lease expiry renderer
-                        var initLeaseexpiry = barMaker.createChartData_exp(currentResult, settings, 10);
+                        var initLeaseexpiry = barMaker.createChartData_exp(currentResult, settings, 6);
                         // for review date renderer
-                        var initReviewdate = barMaker.createChartData_rev(currentResult, settings, 10);
+                        var initReviewdate = barMaker.createChartData_rev(currentResult, settings, 6);
 
                         var initCharts = {
                             stats: initStats,
