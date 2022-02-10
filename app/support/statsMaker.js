@@ -169,7 +169,7 @@ define([
                 var leaseexpiryData = [];
 
                 for (var k = 0; k < data.length; k++) {
-                    if (data[k].attributes[settings.exactexpirydatename] !== null) {
+                    if (data[k].attributes[settings.exactexpirydatename] !== null && data[k].attributes[settings.exactexpirydatename] !== "N/A") {
                         leaseexpiryData.push(new Date(data[k].attributes[settings.exactexpirydatename]));
                     }
                 }
@@ -193,7 +193,7 @@ define([
                 var reviewData = [];
 
                 for (var k = 0; k < data.length; k++) {
-                    if (data[k].attributes[settings.exactreviewdatename] !== null) {
+                    if (data[k].attributes[settings.exactreviewdatename] !== null && data[k].attributes[settings.exactreviewdatename] !== "N/A") {
                         reviewData.push(new Date(data[k].attributes[settings.exactreviewdatename]));
                     }
                 }
