@@ -332,11 +332,12 @@ define([
                 var color = [];
 
                 if (bins_new > 9) {
-                    color = ["#003A49", "#00545d", "#0d6e6c", "#348975", "#5F7C61", "#7E9169", "#5da379", "#8cbc7b", "#c1d37f", "#fbe789"];
+                    //color = ["#003A49", "#00545d", "#0d6e6c", "#348975", "#5F7C61", "#7E9169", "#5da379", "#8cbc7b", "#c1d37f", "#fbe789"];
+                      color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71","#64afca", "#347286", "#7E99AA", "#75c4e1", "#86daf9"];
 
                 }
                 else {
-                    color = ["#003A49", "#00545d", "#0d6e6c", "#8cbc7b", "#c1d37f", "#fbe789"];
+                    color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71", "#86daf9"];
                 }
              
                 for (var i = 0; i < unique_years.length; i++) {
@@ -539,12 +540,15 @@ define([
                 var color = [];
 
                 if (bins_new > 9) {
-                    color = ["#003A49", "#00545d", "#0d6e6c", "#348975", "#5F7C61", "#7E9169", "#5da379", "#8cbc7b", "#c1d37f", "#fbe789"];
+                    //color = ["#003A49", "#00545d", "#0d6e6c", "#348975", "#5F7C61", "#7E9169", "#5da379", "#8cbc7b", "#c1d37f", "#fbe789"];
+                      color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71","#64afca", "#347286", "#7E99AA", "#75c4e1", "#86daf9"];
 
                 }
                 else {
-                    color = ["#003A49", "#00545d", "#0d6e6c", "#8cbc7b", "#c1d37f", "#fbe789"];
+                    color = ["#003a49","#44869c", "#134c5d","#549ab3", "#245e71", "#86daf9"];
                 }
+                    //color = ["#003A49", "#00545d", "#0d6e6c", "#8cbc7b", "#c1d37f", "#fbe789"];
+               
              
                 for (var i = 0; i < unique_years.length; i++) {
                          chartData.push({
@@ -614,7 +618,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "OMRV",
-                        "fillColors": "#348975",
+                        "fillColors": "#44869c",
                         "type": "column",
                         "valueField": "OMRV"
                     },
@@ -624,7 +628,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
-                        "fillColors": "#fbe789",
+                        "fillColors": "#86daf9",
                         "type": "column",
                         "valueField": "CPI_Cap_and_Collar"
                     }],
@@ -707,7 +711,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "OMRV",
-                        "fillColors": "#348975",
+                        "fillColors": "#44869c",
                         "type": "column",
                         "valueField": "OMRV"
                     },
@@ -717,7 +721,7 @@ define([
                         "labelText": "[[value]]",
                         "lineAlpha": 0,
                         "title": "CPI Cap & Collar",
-                        "fillColors": "#fbe789",
+                        "fillColors": "#86daf9",
                         "type": "column",
                         "valueField": "CPI_Cap_and_Collar"
                     }],
