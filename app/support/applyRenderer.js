@@ -45,11 +45,6 @@ define([
                         symbolLayers: [
                             new FillSymbol3DLayer({
                                 material: { color: "#E5E2C2" 
-                                },
-                                edges: {
-                                  type: "solid",
-                                  size: 0.3,
-                                  color: "#003a49"
                                 }
                             })
                         ]
@@ -163,7 +158,7 @@ define([
                         field: fieldname,
                         stops: [
                             { value: valuemin, color: "#003a49" },
-                            { value: valuemax, color: "#e1e1e1" }
+                            { value: valuemax, color: "#fbe789" }
                         ]
                     }]
 
@@ -225,7 +220,7 @@ define([
                         field: fieldname,
                         stops: [
                             { value: year_min, color: "#003a49" },
-                            { value: year_max, color: "#e1e1e1" }
+                            { value: year_max, color: "#fbe789" }
                         ]
                     }]
 
