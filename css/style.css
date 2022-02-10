@@ -405,7 +405,7 @@ html, body {
   font-size: 1vw;
   line-height: 1vw;
   display: inline-block;
-  height: 80px;
+  height: 100px;
   width: 100%;
   border-top: 1px solid black;
 }
