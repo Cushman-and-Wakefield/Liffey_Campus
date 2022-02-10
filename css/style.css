@@ -603,6 +603,8 @@ html, body {
 #reset p{
     text-align:center;
     vertical-align: middle;
+    margin: auto;
+    width: 50%;
 }
 
 #reset:hover{
