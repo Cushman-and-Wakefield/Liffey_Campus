@@ -567,7 +567,9 @@ html, body {
   background: #003a49;
   color: white;
   text-align: center;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
+  margin-top: auto;
+  margin-bottom: auto;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.75vw;
@@ -581,7 +583,9 @@ html, body {
   top: 85%;
   left: 44%;
   text-align: center;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
+  margin-top: auto;
+  margin-bottom: auto;
   cursor: pointer;
   background: #003a49;
   color: white;
