@@ -42,8 +42,8 @@ html, body {
   }
 
 .esri-popup__main-container.esri-widget {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
 }‍‍‍‍‍‍
 
 .button{ 
@@ -601,10 +601,8 @@ html, body {
 }
 
 #reset p{
-    align-self:center;
     text-align:center;
     vertical-align: middle;
-    width:100%;
 }
 
 #reset:hover{
